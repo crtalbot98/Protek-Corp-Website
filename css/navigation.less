@@ -1,32 +1,72 @@
 nav{
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   height: 4em;
   border-bottom: 1px solid black;
   position: fixed;
-  background-color: @navGray;
-  margin: 0;
+  background-color: @red;
   z-index: 2;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   h1{
     font-size: 1.25em;
+    margin-left: 1em;
+    color: white;
   }
 
   a{
     margin-left: 2em;
     font-size: 1.25em;
+    text-decoration: none;
+    color: @navGray;
   }
 }
 
+#desktopNav{
+  display: none;
+}
+
 #navMenu{
-  height: 2em;
-  width: 2em;
-  padding: 0.75em;
+  height: 2.5em;
+  width: 3em;
+  margin-right: 1em;
+}
+
+.menuBar{
+  width: auto;
+  height: 0.50em;
+  border-radius: 1em;
   background-color: black;
-  color: white;
+  margin: 0.25em;
+}
+
+#closeBtn{
+  height: 3em;
+  width: 3em;
+  z-index: 2;
+  float: right;
+  align-self: flex-end;
+}
+
+.closeBar{
+  width: 2em;
+  height: 0.25em;
+  border-radius: 1em;
+  background-color: black;
+  position: absolute;
+}
+
+#leftBar{
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+#rightBar{
+  transform: rotate(315deg);
+  position: absolute;
 }
 
 #dropDown{
@@ -44,49 +84,96 @@ nav{
   justify-content: space-evenly;
 
   a{
-    text-decoration: none;
-    color: black;
     opacity: 0;
   }
 }
 
-#open{
-  position: absolute;
-}
-
-#close{
+#services{
   visibility: hidden;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
-#navMenu:hover #dropDown{
-  visibility: visible;
-  height: 30em;
-
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-
-  a{
-    opacity: 1;
-    transition: opacity 0.1s linear;
+#serviceLink:hover{
+  #services{
+    visibility: visible;
+    transition: visibility 1s ease-in-out;
   }
 }
 
 #navMenu:hover{
-  #open{ visibility: hidden}
-  #close{visibility: visible}
+  #dropDown{
+    visibility: visible;
+    height: 30em;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+    a{
+      opacity: 1;
+      transition: opacity 0.1s linear;
+    }
+  }
 }
 
-html:hover #dropDown{
-  height: 0;
+html:hover {
+  #dropDown {
+    height: 0;
 
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
-  a{
-    opacity: 0;
-    transition: opacity 0.1s linear;
+    a{
+      opacity: 0;
+      transition: opacity 0.1s linear;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px){
+  #dropDown, #navMenu, #closeBtn, #mobileTitle{
+    display: none;
+  }
+
+  nav{
+    height: 3em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    max-width: 100%;
+
+    h1{
+      margin: auto 0 auto 2em;
+      font-size: 1.5em;
+      max-width: 100%;
+    }
+  }
+
+  #desktopNav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 3em;
+  }
+
+  .aLinks{
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: 0 1em 0 0;
+    max-width: 100%;
+
+    a{
+      margin: 0 1em 0 0;
+    }
+  }
+
+  .services{
+    align-self: flex-end;
+    margin: 0 2em 0 0;
+    font-size: 1.05em;
+    max-width: 100%;
   }
 }

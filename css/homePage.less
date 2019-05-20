@@ -1,10 +1,33 @@
 .textBlockHome{
   margin: 4em 1em 4em 1em;
-
 }
 
 .line{
   height: 0.1em;
   background-color: #d9d9d9;
   width: 100%;
+}
+
+@media screen and (min-width: 1000px){
+  #textBlockContainer{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .textBlockHome{
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 600px){
+  #textBlockContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textBlockHome{
+    width: 60%;
+  }
 }

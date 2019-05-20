@@ -9,13 +9,33 @@
 <body>
 
 <nav>
-    <h1>Protek Corporation</h1>
+    <h1 id="mobileTitle">Protek Corporation</h1>
+    <div id="desktopNav">
+        <div class="aLinks">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <h1>Protek Corporation</h1>
+        <div class="services">
+            <a href="#">Sprinkler Installations</a>
+            <a href="#">Fire Alarm Installations</a>
+            <a href="#">Inspections</a>
+        </div>
+    </div>
     <div id="navMenu">
-        <span id="open">menu</span>
-        <span id="close">close</span>
+        <div>
+        <div id="openBtn">
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+        </div>
+        </div>
         <div id="dropDown">
             <a href="#">Home</a>
-            <a href="#">Services</a>
+            <a href="#">Test One</a>
+            <a href="#">Test Two</a>
+            <a href="#">Test Three</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
         </div>
@@ -23,7 +43,7 @@
 </nav>
 
 <section class="titleContainer">
-    <div class="titleImage">
+    <div class="titleImage" id="homeTitleImage">
         <div class="overlay">
             <h3 class="titleText">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -33,38 +53,42 @@
     </div>
 </section>
 
-<section class="textBlockHome">
-    <h2>Header 1</h2>
-    <div class="line"></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Aliquid aperiam atque beatae commodi excepturi fugiat id laudantium placeat quaerat,
-        qui quidem repellendus sunt, voluptate? Consequatur eaque fuga optio saepe temporibus.</p>
-</section>
+<section id="textBlockContainer">
+    <section class="textBlockHome">
+        <h2>Header 1</h2>
+        <div class="line"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquid aperiam atque beatae commodi excepturi fugiat id laudantium placeat quaerat,
+            qui quidem repellendus sunt, voluptate? Consequatur eaque fuga optio saepe temporibus.</p>
+    </section>
 
-<section class="textBlockHome">
-    <h2>Header 1</h2>
-    <div class="line"></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Aliquid aperiam atque beatae commodi excepturi fugiat id laudantium placeat quaerat,
-        qui quidem repellendus sunt, voluptate? Consequatur eaque fuga optio saepe temporibus.</p>
+    <section class="textBlockHome">
+        <h2>Header 1</h2>
+        <div class="line"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquid aperiam atque beatae commodi excepturi fugiat id laudantium placeat quaerat,
+            qui quidem repellendus sunt, voluptate? Consequatur eaque fuga optio saepe temporibus.</p>
+    </section>
 </section>
 
 <footer>
     <section>
         <h3>Address</h3>
-        <p>123 Fake Drive</p>
-        <p>Fake Town</p>
-        <p>Fake City</p>
+        <p>123 Fake Drive<br>
+            Fake Town<br>
+            Fake City</p>
+    </section>
+    <section>
+        <p>Copyright</p>
     </section>
     <section>
         <h3>Phone Number</h3>
         <p>(123)123-1234</p>
-    </section>
-    <section>
         <h3>Fax Number</h3>
         <p>(456)456-4567</p>
     </section>
 </footer>
 
+<!--<script src="js/navigationJS.js"></script>-->
 </body>
 </html>
