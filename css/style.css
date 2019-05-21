@@ -10,6 +10,14 @@ body {
   height: 100%;
   font-family: Roboto;
 }
+@keyframes loadIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 nav {
   min-width: 100%;
   max-width: 100%;
@@ -181,26 +189,41 @@ footer h1 {
 }
 footer h3,
 footer p,
-footer a {
+footer .footerServiceLinks {
   color: #FFFFFF;
   text-decoration: none;
-  margin: 0;
   font-size: 0.9em;
 }
-footer #footerLinks {
+footer .footerServiceLinks {
+  margin: 0.5em;
+}
+footer p {
+  margin: 0;
+}
+#footerLinks {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: flex-start;
 }
-footer #footerLinks a {
-  margin-top: 1em;
-}
-footer #copyright {
+#copyright {
   margin: 3em 0 0 0;
 }
-footer #footerContact {
-  margin-top: 1em;
+#footerContact {
+  margin-top: 2em;
+}
+#directionBtn {
+  background-color: #F04343;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.5em;
+  height: 3em;
+  width: 10em;
+  text-decoration: none;
+  margin: 2em 0 2em 0;
+}
+#directionsBtn:hover {
+  background-color: #d73b3b;
 }
 @media screen and (min-width: 1000px) {
   footer {
@@ -210,9 +233,13 @@ footer #footerContact {
     padding: 2em 0 4em 0;
     font-size: 1em;
   }
+  footer .footerServiceLinks {
+    margin: 0;
+  }
   #footerLinks {
     align-content: flex-start;
     margin-left: 4em;
+    justify-content: space-evenly;
   }
   #footerContact {
     text-align: right;
@@ -238,6 +265,7 @@ footer #footerContact {
   height: 100vh;
   width: 100%;
   margin-bottom: 2em;
+  animation: loadIn 2s;
 }
 .overlay {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
@@ -262,6 +290,9 @@ footer #footerContact {
 }
 #homeTitleImage {
   background-image: url("../assets/images/camera-cyber-data-430208-mobile.jpg");
+}
+#aboutTitleImage {
+  background-image: url("../assets/images/15120-architecture-blue-269077.jpg");
 }
 @media screen and (min-width: 1000px) {
   .titleContainer {
@@ -292,7 +323,7 @@ footer #footerContact {
   }
 }
 .textBlockHome {
-  margin: 4em 1em 4em 1em;
+  margin: 2em 1em 2em 1em;
 }
 .line {
   height: 0.1em;
