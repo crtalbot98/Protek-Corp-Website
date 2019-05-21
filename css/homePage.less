@@ -8,6 +8,63 @@
   width: 100%;
 }
 
+#servicesExplanationSection{
+  width: 100%;
+  height: auto;
+  padding: 1em 0 2em 0;
+  background-color: @navGray;
+  margin-bottom: 2em;
+
+  a{
+    text-decoration: none;
+    color: @redBtnHover;
+    font-size: 1.50em;
+  }
+
+  div{
+    margin: 0 1em 0 1em;
+  }
+
+  h1{
+    text-align: center;
+    color: @redBtnHover;
+    margin-bottom: 2em;
+  }
+
+  h2{
+    color: @redBtnHover;
+  }
+}
+
+#homeQuoteSection{
+  width: 100%;
+  height: 20em;
+  background-color: @navGray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p{
+    margin: 0 1em 3em 1em;
+  }
+
+  button{
+    background-color: @redBtn;
+    font-size: 1.25em;
+    height: 3em;
+    width: 14em;
+    border-radius: 0.5em;
+    border: none;
+    color: @white
+  }
+
+  button:hover{
+    background-color: @redBtnHover;
+  }
+}
+
 @media screen and (min-width: 1000px){
   #textBlockContainer{
     display: flex;
@@ -15,19 +72,48 @@
   }
 
   .textBlockHome{
-    width: 20%;
+    width: 30%;
+    font-size: 1.25em;
   }
-}
 
-@media screen and (min-width: 600px){
-  #textBlockContainer{
+  #homeQuoteSection{
+    p{
+      width: 60%;
+      font-size: 1.25em;
+    }
+  }
+
+  #servicesExplanationSection{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 1.25em;
+    height: 22em;
+    padding: 5em 0 3em 0;
 
-  .textBlockHome{
-    width: 60%;
+    h1{
+      position: absolute;
+      margin: -2em 0 0 2em;
+    }
+
+    div{
+      margin: 0 1em 0 1em;
+      width: 40%;
+    }
   }
 }
+
+//@media screen and (min-width: 600px){
+//  #textBlockContainer{
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//  }
+//
+//  .textBlockHome{
+//    width: 60%;
+//  }
+//}

@@ -16,7 +16,7 @@ nav {
   height: 4em;
   border-bottom: 1px solid black;
   position: fixed;
-  background-color: #F04343;
+  background-color: #2B3039;
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -28,10 +28,9 @@ nav h1 {
   color: white;
 }
 nav a {
-  margin-left: 2em;
+  margin-left: 1em;
   font-size: 1.25em;
   text-decoration: none;
-  color: #F8F8F8;
 }
 #desktopNav {
   display: none;
@@ -45,7 +44,7 @@ nav a {
   width: auto;
   height: 0.5em;
   border-radius: 1em;
-  background-color: black;
+  background-color: #FFFFFF;
   margin: 0.25em;
 }
 #closeBtn {
@@ -59,7 +58,7 @@ nav a {
   width: 2em;
   height: 0.25em;
   border-radius: 1em;
-  background-color: black;
+  background-color: #FFFFFF;
   position: absolute;
 }
 #leftBar {
@@ -117,7 +116,7 @@ html:hover #dropDown a {
   opacity: 0;
   transition: opacity 0.1s linear;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1224px) {
   #dropDown,
   #navMenu,
   #closeBtn,
@@ -151,6 +150,7 @@ html:hover #dropDown a {
   }
   .aLinks a {
     margin: 0 1em 0 0;
+    color: #F8F8F8;
   }
   .services {
     align-self: flex-end;
@@ -158,32 +158,86 @@ html:hover #dropDown a {
     font-size: 1.05em;
     max-width: 100%;
   }
+  .services a {
+    color: #FFFFFF;
+  }
 }
 footer {
   height: auto;
   width: 100%;
   bottom: 0;
-  background-color: #F8F8F8;
+  background-color: #2B3039;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
   padding: 2em 0 2em 0;
-  margin-top: 5em;
+  margin-top: 2em;
 }
-footer section h3 {
-  margin-bottom: 0;
+footer h1 {
+  color: #C5C5C5;
+  margin: 0 0 0 0;
+}
+footer h3,
+footer p,
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0;
+  font-size: 0.9em;
+}
+footer #footerLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+footer #footerLinks a {
+  margin-top: 1em;
+}
+footer #copyright {
+  margin: 3em 0 0 0;
+}
+footer #footerContact {
+  margin-top: 1em;
 }
 @media screen and (min-width: 1000px) {
   footer {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2em 0 4em 0;
+    font-size: 1em;
+  }
+  #footerLinks {
+    align-content: flex-start;
+    margin-left: 4em;
+  }
+  #footerContact {
+    text-align: right;
+    margin-right: 4em;
+  }
+  #footerContact h3 {
+    margin-top: 1em;
+  }
+  #footerLinks {
+    text-align: left;
+  }
+  #footerLinks a {
+    margin-top: 0.5em;
+  }
+  #copyright {
+    position: absolute;
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
   }
 }
 .titleContainer {
   height: 100vh;
   width: 100%;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 .overlay {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
@@ -216,14 +270,12 @@ footer section h3 {
   .overlay {
     height: 500px;
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: block;
   }
   .titleText {
     text-align: left;
     width: 30%;
-    margin: 0 0 0 2em;
+    margin: 6em 0 0 2.5em;
     font-size: 1.25em;
     align-self: flex-start;
   }
@@ -247,24 +299,84 @@ footer section h3 {
   background-color: #d9d9d9;
   width: 100%;
 }
+#servicesExplanationSection {
+  width: 100%;
+  height: auto;
+  padding: 1em 0 2em 0;
+  background-color: #F8F8F8;
+  margin-bottom: 2em;
+}
+#servicesExplanationSection a {
+  text-decoration: none;
+  color: #d73b3b;
+  font-size: 1.5em;
+}
+#servicesExplanationSection div {
+  margin: 0 1em 0 1em;
+}
+#servicesExplanationSection h1 {
+  text-align: center;
+  color: #d73b3b;
+  margin-bottom: 2em;
+}
+#servicesExplanationSection h2 {
+  color: #d73b3b;
+}
+#homeQuoteSection {
+  width: 100%;
+  height: 20em;
+  background-color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#homeQuoteSection p {
+  margin: 0 1em 3em 1em;
+}
+#homeQuoteSection button {
+  background-color: #F04343;
+  font-size: 1.25em;
+  height: 3em;
+  width: 14em;
+  border-radius: 0.5em;
+  border: none;
+  color: #FFFFFF;
+}
+#homeQuoteSection button:hover {
+  background-color: #d73b3b;
+}
 @media screen and (min-width: 1000px) {
   #textBlockContainer {
     display: flex;
     justify-content: space-evenly;
   }
   .textBlockHome {
-    width: 20%;
+    width: 30%;
+    font-size: 1.25em;
   }
-}
-@media screen and (min-width: 600px) {
-  #textBlockContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .textBlockHome {
+  #homeQuoteSection p {
     width: 60%;
+    font-size: 1.25em;
+  }
+  #servicesExplanationSection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 1.25em;
+    height: 22em;
+    padding: 5em 0 3em 0;
+  }
+  #servicesExplanationSection h1 {
+    position: absolute;
+    margin: -2em 0 0 2em;
+  }
+  #servicesExplanationSection div {
+    margin: 0 1em 0 1em;
+    width: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */

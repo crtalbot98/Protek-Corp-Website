@@ -4,7 +4,7 @@ nav{
   height: 4em;
   border-bottom: 1px solid black;
   position: fixed;
-  background-color: @red;
+  background-color: @gunMetal;
   z-index: 2;
 
   display: flex;
@@ -18,10 +18,9 @@ nav{
   }
 
   a{
-    margin-left: 2em;
+    margin-left: 1em;
     font-size: 1.25em;
     text-decoration: none;
-    color: @navGray;
   }
 }
 
@@ -39,7 +38,7 @@ nav{
   width: auto;
   height: 0.50em;
   border-radius: 1em;
-  background-color: black;
+  background-color: @white;
   margin: 0.25em;
 }
 
@@ -55,7 +54,7 @@ nav{
   width: 2em;
   height: 0.25em;
   border-radius: 1em;
-  background-color: black;
+  background-color: @white;
   position: absolute;
 }
 
@@ -132,7 +131,7 @@ html:hover {
   }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1224px){
   #dropDown, #navMenu, #closeBtn, #mobileTitle{
     display: none;
   }
@@ -167,6 +166,7 @@ html:hover {
 
     a{
       margin: 0 1em 0 0;
+      color: @navGray;
     }
   }
 
@@ -175,5 +175,9 @@ html:hover {
     margin: 0 2em 0 0;
     font-size: 1.05em;
     max-width: 100%;
+
+    a{
+      color: @white;
+    }
   }
 }
