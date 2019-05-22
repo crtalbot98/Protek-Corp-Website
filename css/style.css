@@ -124,6 +124,53 @@ html:hover #dropDown a {
   opacity: 0;
   transition: opacity 0.1s linear;
 }
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  #dropDown,
+  #navMenu,
+  #closeBtn,
+  #mobileTitle {
+    display: none;
+  }
+  nav {
+    height: 5em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    max-width: 100%;
+    font-size: 0.85em;
+  }
+  nav h1 {
+    margin: -1em 0 auto 2em;
+    font-size: 1.5em;
+    max-width: 100%;
+  }
+  #desktopNav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .aLinks {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: 0 1em 0 0;
+    max-width: 100%;
+  }
+  .aLinks a {
+    margin: 0 1em 0 0;
+    color: #F8F8F8;
+  }
+  .services {
+    align-self: flex-end;
+    margin: 0 2em 0 0;
+    font-size: 1.05em;
+    max-width: 100%;
+  }
+  .services a {
+    color: #FFFFFF;
+  }
+}
 @media screen and (min-width: 1224px) {
   #dropDown,
   #navMenu,
@@ -224,6 +271,26 @@ footer p {
 }
 #directionsBtn:hover {
   background-color: #d73b3b;
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  #copyright {
+    align-self: flex-end;
+    position: absolute;
+    margin: auto;
+  }
+  #footerLinks {
+    text-align: left;
+  }
+  #footerContact {
+    text-align: right;
+    align-self: flex-start;
+    margin: 0;
+  }
 }
 @media screen and (min-width: 1000px) {
   footer {
@@ -378,6 +445,16 @@ footer p {
 #homeQuoteSection button:hover {
   background-color: #d73b3b;
 }
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  #textBlockContainer {
+    width: 80%;
+    margin: auto;
+  }
+  #servicesExplanationSection {
+    padding: 4em;
+    box-sizing: border-box;
+  }
+}
 @media screen and (min-width: 1000px) {
   #textBlockContainer {
     display: flex;
@@ -398,12 +475,13 @@ footer p {
     align-content: center;
     justify-content: space-between;
     font-size: 1.25em;
-    height: 22em;
-    padding: 5em 0 3em 0;
+    height: 30em;
+    padding: 4em 3em 3em 4em;
+    box-sizing: border-box;
   }
   #servicesExplanationSection h1 {
     position: absolute;
-    margin: -2em 0 0 2em;
+    margin: -2em 0 0 0.75em;
   }
   #servicesExplanationSection div {
     margin: 0 1em 0 1em;

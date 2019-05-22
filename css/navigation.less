@@ -131,6 +131,58 @@ html:hover {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1223px){
+  #dropDown, #navMenu, #closeBtn, #mobileTitle{
+    display: none;
+  }
+
+  nav{
+    height: 5em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    max-width: 100%;
+    font-size: 0.85em;
+
+    h1{
+      margin: -1em 0 auto 2em;
+      font-size: 1.5em;
+      max-width: 100%;
+    }
+  }
+
+  #desktopNav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .aLinks{
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: 0 1em 0 0;
+    max-width: 100%;
+
+    a{
+      margin: 0 1em 0 0;
+      color: @navGray;
+    }
+  }
+
+  .services{
+    align-self: flex-end;
+    margin: 0 2em 0 0;
+    font-size: 1.05em;
+    max-width: 100%;
+
+    a{
+      color: @white;
+    }
+  }
+}
+
 @media screen and (min-width: 1224px){
   #dropDown, #navMenu, #closeBtn, #mobileTitle{
     display: none;
@@ -181,3 +233,4 @@ html:hover {
     }
   }
 }
+

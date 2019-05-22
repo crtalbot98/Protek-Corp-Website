@@ -61,6 +61,30 @@ footer{
   background-color: @redBtnHover;
 }
 
+@media screen and (min-width: 768px) and (max-width: 999px){
+  footer{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  #copyright{
+    align-self: flex-end;
+    position: absolute;
+    margin: auto;
+  }
+
+  #footerLinks{
+    text-align: left;
+  }
+
+  #footerContact{
+    text-align: right;
+    align-self: flex-start;
+    margin: 0;
+  }
+}
+
 @media screen and (min-width: 1000px){
   footer{
     flex-direction: row;
