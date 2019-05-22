@@ -2,13 +2,129 @@ footer{
   height: auto;
   width: 100%;
   bottom: 0;
-  background-color: @footerBlue;
-  margin: 0;
+  background-color: @gunMetal;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
   padding: 2em 0 2em 0;
-  color: @navGray;
+  margin-top: 2em;
+
+  h1{
+    color: @textGray;
+    margin: 0 0 0 0;
+  }
+
+  h3, p, .footerServiceLinks{
+    color: @white;
+    text-decoration: none;
+    font-size: 0.90em;
+  }
+
+  .footerServiceLinks{
+    margin: 0.5em;
+  }
+
+  p{
+    margin: 0;
+  }
+}
+
+#footerLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+#copyright{
+  margin: 3em 0 0 0;
+}
+
+#footerContact{
+  margin-top: 2em;
+}
+
+#directionBtn{
+  background-color: @redBtn;
+  color: @white;
+  border: none;
+  border-radius: 0.50em;
+  height: 3em;
+  width: 10em;
+  text-decoration: none;
+  margin: 2em 0 2em 0;
+}
+
+#directionsBtn:hover{
+  background-color: @redBtnHover;
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px){
+  footer{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  #copyright{
+    align-self: flex-end;
+    position: absolute;
+    margin: auto;
+  }
+
+  #footerLinks{
+    text-align: left;
+  }
+
+  #footerContact{
+    text-align: right;
+    align-self: flex-start;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 1em 0 3em 0;
+    font-size: 1em;
+
+    .footerServiceLinks{
+      margin: 0;
+    }
+  }
+
+  #footerLinks{
+    align-content: flex-start;
+    margin-left: 4em;
+    justify-content: space-evenly;
+  }
+
+  #footerContact{
+    text-align: right;
+    margin-right: 4em;
+
+    h3{
+      margin-top: 1em;
+    }
+  }
+
+  #footerLinks{
+    text-align: left;
+
+    a{
+      margin-top: 0.5em;
+    }
+  }
+
+  #copyright{
+    position: absolute;
+    align-self: flex-end;
+    text-align: center;
+    width: 100%;
+  }
 }
