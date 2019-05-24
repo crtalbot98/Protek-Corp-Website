@@ -145,6 +145,11 @@ nav a {
   visibility: visible;
   transition: visibility 1s ease-in-out;
 }
+#navMenu:active,
+#navMenu:hover {
+  cursor: pointer;
+}
+#navMenu:active #dropDown,
 #navMenu:hover #dropDown {
   visibility: visible;
   height: 30em;
@@ -152,16 +157,19 @@ nav a {
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
+#navMenu:active #dropDown a,
 #navMenu:hover #dropDown a {
   opacity: 1;
   transition: opacity 0.1s linear;
 }
+html:active #dropDown,
 html:hover #dropDown {
   height: 0;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
+html:active #dropDown a,
 html:hover #dropDown a {
   opacity: 0;
   transition: opacity 0.1s linear;
@@ -174,7 +182,7 @@ html:hover #dropDown a {
     display: none;
   }
   nav {
-    height: 5em;
+    height: 4em;
     padding-top: 1.25em;
     padding-bottom: 1.25em;
     max-width: 100%;
@@ -319,6 +327,7 @@ footer p {
     align-items: flex-start;
     padding: 2em 4em 2em 4em;
     box-sizing: border-box;
+    margin-top: 6em;
   }
   #copyright {
     align-self: flex-end;
@@ -327,11 +336,17 @@ footer p {
   }
   .footerLinks {
     text-align: left;
+    margin: 0;
   }
   #footerContact {
     text-align: left;
     align-self: flex-start;
     margin: 0;
+  }
+  @supports (-ms-ime-align: auto) {
+    footer {
+      justify-content: space-between;
+    }
   }
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
@@ -339,8 +354,9 @@ footer p {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding: 1em 2em 1em 2em;
+    padding: 2em 2em 1em 2em;
     box-sizing: border-box;
+    height: 28em;
   }
   footer a {
     margin-top: 1em;
@@ -362,23 +378,24 @@ footer p {
     position: absolute;
     align-self: flex-end;
     text-align: center;
+    margin: 0;
     width: 100%;
   }
 }
 .titleContainer {
-  height: 100vh;
+  height: 60vh;
   width: 100%;
   margin-bottom: 4em;
   animation: loadIn 2s;
 }
 .overlay {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  position: absolute;
   z-index: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .titleImage {
   height: 100%;
@@ -388,9 +405,8 @@ footer p {
 }
 .titleText {
   color: white;
-  text-align: center;
-  align-self: flex-end;
-  width: 90%;
+  font-size: 1.5em;
+  margin-top: 12em;
 }
 #homeTitleImage {
   background-image: url("../assets/images/camera-cyber-data-430208-mobile.jpg");
@@ -413,17 +429,17 @@ footer p {
 @media screen and (min-width: 1000px) {
   .titleContainer {
     height: 500px;
+    margin-bottom: 6em;
   }
   .overlay {
-    height: 500px;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    height: 100%;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     display: block;
   }
   .titleText {
-    text-align: left;
-    width: 30%;
-    margin: 6em 0 0 2.5em;
-    align-self: flex-start;
+    font-size: 2em;
+    margin: 8em 0 0 1em;
+    position: absolute;
   }
   #homeTitleImage {
     background-image: url("../assets/images/camera-cyber-data-430208.jpg");
@@ -512,7 +528,8 @@ footer p {
     justify-content: space-evenly;
   }
   .textBlockHome {
-    width: 30%;
+    width: 40%;
+    margin: 2em 4em 2em 4em;
   }
   #homeQuoteSection p {
     width: 60%;
@@ -535,6 +552,19 @@ footer p {
     margin: 0 1em 0 1em;
     width: 40%;
   }
+  @supports (-ms-ime-align: auto) {
+    .textBlockHome {
+      width: 100%;
+      margin: 2em 4em 2em 4em;
+    }
+  }
+}
+#serviceContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 #serviceSection {
   margin: 0 1em 0 1em;
@@ -543,51 +573,108 @@ footer p {
   margin-bottom: 0;
   font-size: 1.25em;
 }
+#importanceNotice {
+  background-color: #F8F8F8;
+  width: 100%;
+  margin-top: 4em;
+  box-sizing: border-box;
+  padding: 4em 2em 4em 2em;
+  text-align: center;
+}
+#importanceNotice h1 {
+  margin-bottom: 2em;
+  font-size: 1.5em;
+  color: #d73b3b;
+}
+#importanceNotice p {
+  font-size: 1.5em;
+}
 @media screen and (min-width: 1224px) {
-  #serviceSection {
-    margin-left: 4em;
-    width: 40%;
+  #serviceContainer {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  #serviceSection {
+    margin-left: 1em;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 0 3em 0 3em;
+  }
+  #serviceSection div {
+    margin-bottom: 2em;
+  }
+  #importanceNotice {
+    width: 40%;
+    height: 30em;
+    align-self: flex-start;
+    margin-right: 1em;
+  }
+  #importanceNotice p {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  #importanceNotice p {
+    width: 80%;
+    margin: auto;
   }
 }
 #contactSection {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
+  width: 100%;
 }
 #contactForm {
   margin-top: 4em;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 0;
 }
 #contactForm div {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 90%;
 }
-#contactForm label {
-  align-self: flex-start;
-  margin: 2em 0 0 1em;
+#contactForm .formLabel {
+  margin: 2em 0 0 0;
 }
 #contactForm input {
   height: 3em;
-  width: 90%;
+  width: 100%;
+}
+#jobTypeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#jobTypeSection p {
+  font-size: 16px;
 }
 label span {
   background-color: #F8F8F8;
   padding: 1em 1em 1em 1em;
   text-align: center;
-  width: 12em;
+  align-self: center;
+  width: 10em;
   display: inline-block;
   border-radius: 0.5em;
   border: 1px solid #C5C5C5;
 }
 .radioBtnContainer {
-  margin-bottom: 1em;
+  max-width: 12em;
+  height: 5em;
+  align-self: center;
+  padding: 0;
 }
 input[type=radio] {
   display: none;
@@ -601,7 +688,7 @@ label input[type=radio]:checked ~ * {
 }
 #message {
   height: 6em;
-  width: 90%;
+  width: 100%;
   resize: none;
 }
 input[type=text]:focus {
@@ -612,6 +699,7 @@ input[type=text]:focus {
   color: #FFFFFF;
   height: 3em;
   width: 90%;
+  align-self: center;
   border: none;
   border-radius: 0.5em;
   margin-top: 4em;
@@ -620,59 +708,93 @@ input[type=text]:focus {
   #contactSection {
     justify-content: space-between;
     flex-direction: row;
-    margin: 0 8em 0 8em;
-  }
-  #serviceSection {
-    height: 30em;
+    padding: 0 10em 0 10em;
+    box-sizing: border-box;
     margin: 0;
+  }
+  #contactSection #serviceSection {
+    height: 30em;
+    width: 30em;
+    margin: 0;
+    align-self: flex-start;
+    padding: 0;
   }
   #contactForm {
     margin: 0;
     width: 30em;
+    align-self: flex-start;
+    justify-content: space-between;
+  }
+  #contactForm input {
+    width: 100%;
+  }
+  #contactForm label,
+  #contactForm p {
+    font-size: 20px;
+  }
+  #contactForm h1 {
+    align-self: flex-start;
+  }
+  #contactForm .line {
+    width: 100%;
   }
   #jobTypeSection {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 30em;
-    height: 20em;
-    margin: 1em 0 0 0;
+    align-self: flex-start;
+    min-width: 100%;
+    height: 15em;
+    margin: 4em 0 0 0;
   }
   #jobTypeSection p {
     position: absolute;
     align-self: flex-start;
     margin: -7em 0 0 1em;
   }
+  #message {
+    width: 100%;
+  }
   label span {
     background-color: #F8F8F8;
     min-width: 8em;
     padding: 1em;
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
   #submitBtn {
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 1em 0 1em 0;
+  }
+  @supports (-ms-ime-align: auto) {
+    #contactSection {
+      width: 100%;
+      padding: 0 6em 0 6em;
+    }
+    #jobTypeSection p {
+      margin-top: -14em;
+    }
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1223px) {
   #contactSection {
-    margin: 0 9em 0 9em;
+    padding: 0 4em 0 4em;
+    box-sizing: border-box;
   }
   #jobTypeSection {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     width: 30em;
-    height: 20em;
-    margin: 1em auto 0 auto;
+    height: 15em;
+    margin: 3em auto 0 auto;
   }
   #jobTypeSection p {
     position: absolute;
     align-self: flex-start;
-    margin-top: -7em;
+    margin-top: -8em;
   }
   #submitBtn {
-    height: 2em;
+    height: 3em;
     width: 60%;
   }
 }

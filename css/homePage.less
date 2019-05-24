@@ -88,7 +88,8 @@
   }
 
   .textBlockHome{
-    width: 30%;
+    width: 40%;
+    margin: 2em 4em 2em 4em;
     //font-size: 1.25em;
   }
 
@@ -117,6 +118,13 @@
     div{
       margin: 0 1em 0 1em;
       width: 40%;
+    }
+  }
+
+  @supports (-ms-ime-align: auto){
+    .textBlockHome{
+      width: 100%;
+      margin: 2em 4em 2em 4em;
     }
   }
 }
