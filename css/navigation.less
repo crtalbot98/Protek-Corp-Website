@@ -98,7 +98,9 @@ nav{
   }
 }
 
-#navMenu:hover{
+#navMenu:active, #navMenu:hover{
+  cursor: pointer;
+
   #dropDown{
     visibility: visible;
     height: 30em;
@@ -114,7 +116,7 @@ nav{
   }
 }
 
-html:hover {
+html:active, html:hover{
   #dropDown {
     height: 0;
 
@@ -135,7 +137,7 @@ html:hover {
   }
 
   nav{
-    height: 5em;
+    height: 4em;
     padding-top: 1.25em;
     padding-bottom: 1.25em;
     max-width: 100%;

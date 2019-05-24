@@ -1,5 +1,9 @@
 .textBlockHome{
   margin: 2em 1em 2em 1em;
+
+  h2{
+    margin-bottom: 0;
+  }
 }
 
 .line{
@@ -11,7 +15,7 @@
 #servicesExplanationSection{
   width: 100%;
   height: auto;
-  padding: 1em 0 2em 0;
+  padding: 1em 0 1em 0;
   background-color: @navGray;
   margin: 4em 0 0 0;
 
@@ -47,7 +51,7 @@
   margin: 4em 0 0 0;
 
   p{
-    margin: 0 1em 3em 1em;
+    margin: 0 1em 2em 1em;
   }
 
   button{
@@ -56,7 +60,8 @@
     width: 14em;
     border-radius: 0.5em;
     border: none;
-    color: @white
+    color: @white;
+    margin-bottom: 1em;
   }
 
   button:hover{
@@ -83,14 +88,15 @@
   }
 
   .textBlockHome{
-    width: 30%;
-    font-size: 1.25em;
+    width: 40%;
+    margin: 2em 4em 2em 4em;
+    //font-size: 1.25em;
   }
 
   #homeQuoteSection{
     p{
       width: 60%;
-      font-size: 1.25em;
+      //font-size: 1.25em;
     }
   }
 
@@ -100,9 +106,8 @@
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
-    font-size: 1.25em;
     height: 30em;
-    padding: 4em 3em 3em 4em;
+    padding: 1em 3em 1em 3em;
     box-sizing: border-box;
 
     h1{
@@ -113,6 +118,13 @@
     div{
       margin: 0 1em 0 1em;
       width: 40%;
+    }
+  }
+
+  @supports (-ms-ime-align: auto){
+    .textBlockHome{
+      width: 100%;
+      margin: 2em 4em 2em 4em;
     }
   }
 }
