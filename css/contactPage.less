@@ -1,0 +1,207 @@
+#contactSection{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#contactForm{
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 0;
+
+  div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .formLabel{
+    margin: 2em 0 0 0;
+  }
+
+  input{
+    height: 3em;
+    width: 100%;
+  }
+}
+
+#jobTypeSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p{
+    font-size: 16px;
+  }
+}
+
+ label span{
+  background-color: @navGray;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+  align-self: center;
+  width: 10em;
+  display: inline-block;
+  border-radius: 0.50em;
+  border: 1px solid @textGray;
+}
+
+.radioBtnContainer{
+  max-width: 12em;
+  height: 5em;
+  align-self: center;
+  padding: 0;
+}
+
+input[type=radio]{
+  display: none;
+}
+
+label input[type=radio]:hover ~ *{
+  background-color: @textGray;
+}
+
+label input[type=radio]:checked ~ *{
+  background-color: @redBtnHover;
+  color: @white;
+}
+
+#message{
+  height: 6em;
+  width: 100%;
+  resize: none;
+}
+
+input[type=text]:focus{
+  border: 1px solid @redBtnHover;
+}
+
+#submitBtn{
+  background-color: @redBtnHover;
+  color: @white;
+  height: 3em;
+  width: 90%;
+  align-self: center;
+  border: none;
+  border-radius: 0.50em;
+  margin-top: 4em;
+}
+
+@media screen and (min-width: 1224px){
+  #contactSection{
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 10em 0 10em;
+    box-sizing: border-box;
+    margin: 0;
+
+    #serviceSection{
+      height: 30em;
+      width: 30em;
+      margin: 0;
+      align-self: flex-start;
+      padding: 0;
+    }
+  }
+
+  #contactForm{
+    margin: 0;
+    width: 30em;
+    align-self: flex-start;
+    justify-content: space-between;
+
+    input{
+      width: 100%;
+    }
+
+    label, p {
+      font-size: 20px;
+    }
+
+    h1{
+      align-self: flex-start;
+    }
+    .line{
+      width: 100%;
+    }
+  }
+
+  #jobTypeSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: flex-start;
+    min-width: 100%;
+    height: 15em;
+    margin: 4em 0 0 0;
+
+    p{
+      position: absolute;
+      align-self: flex-start;
+      margin: -7em 0 0 1em;
+    }
+  }
+
+  #message{
+    width: 100%;
+  }
+
+  label span{
+       background-color: @navGray;
+       min-width: 8em;
+       padding: 1em;
+       font-size: 0.75em;
+     }
+
+  #submitBtn{
+    font-size: 1em;
+    padding: 1em 0 1em 0;
+  }
+
+  @supports (-ms-ime-align: auto){
+    #contactSection{
+      width: 100%;
+      padding: 0 6em 0 6em;
+    }
+
+    #jobTypeSection{
+      p{
+        margin-top: -14em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1223px){
+    #contactSection{
+      padding:0 4em 0 4em;
+      box-sizing: border-box;
+    }
+
+    #jobTypeSection{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 30em;
+      height: 15em;
+      margin: 3em auto 0 auto;
+
+      p{
+        position: absolute;
+        align-self: flex-start;
+        margin-top: -8em;
+      }
+    }
+
+    #submitBtn{
+      height: 3em;
+      width: 60%;
+    }
+}
