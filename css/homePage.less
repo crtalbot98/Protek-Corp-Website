@@ -6,12 +6,6 @@
   }
 }
 
-.line{
-  height: 0.1em;
-  background-color: #d9d9d9;
-  width: 100%;
-}
-
 #servicesExplanationSection{
   width: 100%;
   height: auto;
@@ -66,6 +60,15 @@
 
   button:hover{
     background-color: @redBtnHover;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #homeQuoteSection{
+    max-width: 100%;
+    p{
+      max-width: 90%;
+    }
   }
 }
 
@@ -128,16 +131,3 @@
     }
   }
 }
-
-//@media screen and (min-width: 600px){
-//  #textBlockContainer{
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
-//    align-items: center;
-//  }
-//
-//  .textBlockHome{
-//    width: 60%;
-//  }
-//}

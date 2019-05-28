@@ -5,7 +5,7 @@
 h1,
 h3,
 p {
-  font-size: 1.25em;
+  font-size: 1.15em;
 }
 h2 {
   font-size: 1.5em;
@@ -124,8 +124,7 @@ nav a {
   top: 4em;
   left: 0;
   height: 0;
-  position: fixed;
-  z-index: 2;
+  position: absolute;
   min-width: 100%;
   background-color: #F8F8F8;
   border-bottom: 1px solid black;
@@ -262,6 +261,14 @@ html:hover #dropDown a {
     color: #FFFFFF;
   }
 }
+@media screen and (min-width: 1224px) and screen and (-ms-high-contrast: active), screen and (min-width: 1224px) and (-ms-high-contrast: none) {
+  nav {
+    height: 5em;
+  }
+  #desktopNav {
+    height: 5em;
+  }
+}
 footer {
   height: auto;
   width: 100%;
@@ -321,22 +328,32 @@ footer p {
 }
 @media screen and (min-width: 1000px) {
   footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 6em;
+  }
+  #footerFlexContainer {
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: flex-start;
     align-items: flex-start;
-    padding: 2em 4em 2em 4em;
-    box-sizing: border-box;
-    margin-top: 6em;
+    margin: 2em 4em 2em 4em;
+    width: 100%;
   }
   #copyright {
-    align-self: flex-end;
     position: absolute;
-    margin: auto;
+    margin-top: 13em;
   }
   .footerLinks {
     text-align: left;
-    margin: 0;
+    margin-top: 0;
+  }
+  .footerLinks:nth-child(2) {
+    margin-top: 0;
   }
   #footerContact {
     text-align: left;
@@ -345,8 +362,47 @@ footer p {
   }
   @supports (-ms-ime-align: auto) {
     footer {
-      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 6em;
     }
+    #footerFlexContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: flex-start;
+      align-items: flex-start;
+      box-sizing: border-box;
+      padding: 1em 12em 0 12em;
+    }
+    #copyright {
+      position: absolute;
+      margin-top: 26em;
+    }
+  }
+}
+@media screen and (min-width: 1000px) and screen and (-ms-high-contrast: active), screen and (min-width: 1000px) and (-ms-high-contrast: none) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  footer #copyright {
+    position: absolute;
+    align-self: center;
+    margin-left: -5em;
+    margin-top: -1em;
+  }
+  #footerFlexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding: 0 20em 0 20em;
+    box-sizing: border-box;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
@@ -361,11 +417,22 @@ footer p {
   footer a {
     margin-top: 1em;
   }
+  #footerFlexContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+  }
   .footerLinks {
     align-content: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: left;
     margin-left: 0;
+    padding: 0;
+  }
+  .footerLinks:nth-child(2) {
+    height: 60%;
+    margin-top: 0;
   }
   #footerContact {
     text-align: right;
@@ -382,10 +449,18 @@ footer p {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 999px) and screen and (-ms-high-contrast: active), screen and (min-width: 768px) and (max-width: 999px) and (-ms-high-contrast: none) {
+  #footerFlexContainer {
+    margin: auto;
+  }
+  #copyright {
+    position: absolute;
+    margin: 5em -20em 0 0;
+  }
+}
 .titleContainer {
   height: 60vh;
   width: 100%;
-  margin-bottom: 4em;
   animation: loadIn 2s;
 }
 .overlay {
@@ -459,11 +534,6 @@ footer p {
 .textBlockHome h2 {
   margin-bottom: 0;
 }
-.line {
-  height: 0.1em;
-  background-color: #d9d9d9;
-  width: 100%;
-}
 #servicesExplanationSection {
   width: 100%;
   height: auto;
@@ -511,6 +581,14 @@ footer p {
 }
 #homeQuoteSection button:hover {
   background-color: #d73b3b;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #homeQuoteSection {
+    max-width: 100%;
+  }
+  #homeQuoteSection p {
+    max-width: 90%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
   #textBlockContainer {
@@ -573,53 +651,101 @@ footer p {
   margin-bottom: 0;
   font-size: 1.25em;
 }
+#serviceSection div {
+  margin-bottom: 2em;
+}
 #importanceNotice {
   background-color: #F8F8F8;
   width: 100%;
-  margin-top: 4em;
+  margin: 0 0 4em 0;
   box-sizing: border-box;
-  padding: 4em 2em 4em 2em;
+  padding: 2em 1em 2em 1em;
   text-align: center;
 }
 #importanceNotice h1 {
   margin-bottom: 2em;
-  font-size: 1.5em;
   color: #d73b3b;
 }
-#importanceNotice p {
-  font-size: 1.5em;
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #serviceContainer {
+    align-items: stretch;
+  }
+  #servicesExplanationSection {
+    max-width: 100%;
+  }
+  #servicesExplanationSection h1,
+  #servicesExplanationSection p {
+    max-width: 90%;
+  }
 }
 @media screen and (min-width: 1224px) {
+  #serviceDesktopMargin {
+    margin-bottom: 4em;
+  }
   #serviceContainer {
+    height: 30em;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2em 0 2em;
+  }
+  #serviceContainer.fireExtServiceContainer {
+    height: 40em;
   }
   #serviceSection {
     margin-left: 1em;
-    width: 40%;
+    width: 50%;
     box-sizing: border-box;
     padding: 0 3em 0 3em;
+    align-self: center;
   }
   #serviceSection div {
     margin-bottom: 2em;
   }
+  #serviceSection h1 {
+    margin-top: 0;
+  }
   #importanceNotice {
     width: 40%;
-    height: 30em;
+    height: 100%;
     align-self: flex-start;
-    margin-right: 1em;
+    margin: 0 1em 0 0;
+  }
+  #importanceNotice h1 {
+    margin: auto auto 1em auto;
   }
   #importanceNotice p {
     width: 70%;
     margin: auto;
   }
+  @supports (-ms-ime-align: auto) {
+    #serviceContainer {
+      width: 100%;
+      margin: 0;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 0 4em 0 4em;
+    }
+    #importanceNotice {
+      margin: 0;
+    }
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1223px) {
+  #serviceDesktopMargin {
+    margin-bottom: 0;
+  }
+  #serviceSection {
+    margin: auto;
+    width: 60%;
+  }
+  #importanceNotice {
+    padding: 4em 0 4em 0;
+  }
   #importanceNotice p {
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
 }
@@ -635,7 +761,7 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 95%;
   padding: 0;
 }
 #contactForm div {
@@ -704,6 +830,11 @@ input[type=text]:focus {
   border-radius: 0.5em;
   margin-top: 4em;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #contactSection {
+    align-items: stretch;
+  }
+}
 @media screen and (min-width: 1224px) {
   #contactSection {
     justify-content: space-between;
@@ -734,6 +865,8 @@ input[type=text]:focus {
   }
   #contactForm h1 {
     align-self: flex-start;
+    font-size: 20px;
+    margin-top: 0;
   }
   #contactForm .line {
     width: 100%;
@@ -768,11 +901,16 @@ input[type=text]:focus {
   @supports (-ms-ime-align: auto) {
     #contactSection {
       width: 100%;
-      padding: 0 6em 0 6em;
+      padding: 0 9em 0 9em;
     }
     #jobTypeSection p {
       margin-top: -14em;
     }
+  }
+}
+@media screen and (min-width: 1224px) and screen and (-ms-high-contrast: active), screen and (min-width: 1224px) and (-ms-high-contrast: none) {
+  #jobTypeSection p {
+    margin-top: -2em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1223px) {
@@ -798,4 +936,4 @@ input[type=text]:focus {
     width: 60%;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
