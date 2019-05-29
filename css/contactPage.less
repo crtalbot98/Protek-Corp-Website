@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 95%;
   padding: 0;
 
   div{
@@ -94,6 +94,12 @@ input[type=text]:focus{
   margin-top: 4em;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  #contactSection{
+    align-items: stretch;
+  }
+}
+
 @media screen and (min-width: 1224px){
   #contactSection{
     justify-content: space-between;
@@ -127,6 +133,8 @@ input[type=text]:focus{
 
     h1{
       align-self: flex-start;
+      font-size: 20px;
+      margin-top: 0;
     }
     .line{
       width: 100%;
@@ -165,10 +173,18 @@ input[type=text]:focus{
     padding: 1em 0 1em 0;
   }
 
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    #jobTypeSection{
+      p{
+        margin-top: -2em;
+      }
+    }
+  }
+
   @supports (-ms-ime-align: auto){
     #contactSection{
       width: 100%;
-      padding: 0 6em 0 6em;
+      padding: 0 9em 0 9em;
     }
 
     #jobTypeSection{

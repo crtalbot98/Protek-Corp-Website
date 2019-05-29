@@ -71,8 +71,7 @@ nav{
   top: 4em;
   left: 0;
   height: 0;
-  position: fixed;
-  z-index: 2;
+  position: absolute;
   min-width: 100%;
   background-color: @navGray;
   border-bottom: 1px solid black;
@@ -225,6 +224,16 @@ html:active, html:hover{
 
     a{
       color: @white;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    nav{
+      height: 5em;
+    }
+
+    #desktopNav{
+      height: 5em;
     }
   }
 }
