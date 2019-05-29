@@ -534,12 +534,23 @@ footer p {
 .textBlockHome h2 {
   margin-bottom: 0;
 }
+#serviceHeader {
+  background-color: #F8F8F8;
+  height: 2em;
+  margin: 4em 0 0 0;
+  padding: 2em 0 2em 1em;
+}
+#serviceHeader h1 {
+  font-size: 24px;
+  color: #d73b3b;
+}
 #servicesExplanationSection {
   width: 100%;
   height: auto;
   padding: 1em 0 1em 0;
+  margin-top: 0;
   background-color: #F8F8F8;
-  margin: 4em 0 0 0;
+  box-sizing: border-box;
 }
 #servicesExplanationSection a {
   text-decoration: none;
@@ -590,16 +601,6 @@ footer p {
     max-width: 90%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  #textBlockContainer {
-    width: 80%;
-    margin: auto;
-  }
-  #servicesExplanationSection {
-    padding: 4em;
-    box-sizing: border-box;
-  }
-}
 @media screen and (min-width: 1000px) {
   #textBlockContainer {
     display: flex;
@@ -611,6 +612,10 @@ footer p {
   }
   #homeQuoteSection p {
     width: 60%;
+  }
+  #serviceHeader {
+    background-color: #F8F8F8;
+    margin-top: 4em;
   }
   #servicesExplanationSection {
     display: flex;
@@ -624,7 +629,7 @@ footer p {
   }
   #servicesExplanationSection h1 {
     position: absolute;
-    margin: -2em 0 0 0.75em;
+    margin: 0 0 0 0.75em;
   }
   #servicesExplanationSection div {
     margin: 0 1em 0 1em;
@@ -635,6 +640,16 @@ footer p {
       width: 100%;
       margin: 2em 4em 2em 4em;
     }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  #textBlockContainer {
+    width: 80%;
+    margin: auto;
+  }
+  #servicesExplanationSection {
+    padding: 4em;
+    box-sizing: border-box;
   }
 }
 #serviceContainer {
