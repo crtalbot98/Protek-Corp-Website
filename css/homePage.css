@@ -1,0 +1,9 @@
+#homeImage {
+  top: 4em;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/images/camera-cyber-data-430208.jpg");
+  background-position: center;
+  background-size: cover;
+}
+/*# sourceMappingURL=homePage.css.map */

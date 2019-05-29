@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <title>Protek Corp | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
 <nav>
-    <h1 id="mobileTitle">Protek Corporation</h1>
+    <h1 id="mobileTitle">PROTEK CORPORATION</h1>
     <div id="desktopNav">
         <div class="aLinks">
             <a href="#">Home</a>
             <a href="about.html">About</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
         </div>
-        <h1>Protek Corporation</h1>
+        <h1>PROTEK CORPORATION</h1>
         <div class="services">
-            <a href="#">Sprinkler Installations</a>
-            <a href="#">Fire Alarm Installations</a>
-            <a href="#">Inspections</a>
-            <a href="#">Fire Extinguishers</a>
+            <a href="sprinkler-page.html">Sprinkler Systems</a>
+            <a href="alarm-page.html">Alarm Systems</a>
+            <a href="extinguisher-page.html">Fire Extinguishers</a>
         </div>
     </div>
     <div id="navMenu">
@@ -34,12 +33,11 @@
         </div>
         <div id="dropDown">
             <a href="#">Home</a>
-            <a href="#">Sprinkler Installations</a>
-            <a href="#">Fire Alarm Installations</a>
-            <a href="#">Inspections</a>
+            <a href="sprinkler-page.html">Sprinkler Systems</a>
+            <a href="alarm-page.html">Alarm Systems</a>
             <a href="#">Fire Extinguishers</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
     </div>
 </nav>
@@ -48,7 +46,7 @@
     <div class="titleImage" id="homeTitleImage">
         <div class="overlay">
             <h3 class="titleText">
-                Welcome, to Protek Corporation
+                WELCOME, TO PROTEK CORP
             </h3>
         </div>
     </div>
@@ -57,7 +55,6 @@
 <section id="textBlockContainer">
     <section class="textBlockHome">
         <h2>Overview of work</h2>
-        <div class="line"></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Aliquid aperiam atque beatae commodi excepturi fugiat id laudantium placeat quaerat,
             qui quidem repellendus sunt, voluptate? Consequatur eaque fuga optio saepe temporibus.</p>
@@ -65,15 +62,17 @@
 
     <section class="textBlockHome">
         <h2>Summary of business</h2>
-        <div class="line"></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Aliquid aperiam atque beatae commodi excepturi fugiat id laudantium placeat quaerat,
             qui quidem repellendus sunt, voluptate? Consequatur eaque fuga optio saepe temporibus.</p>
     </section>
 </section>
 
+<section id="serviceHeader">
+    <h1>Become Protected by Protek</h1>
+</section>
+
 <section id="servicesExplanationSection">
-<!--    <h1>Get protected with Protek</h1>-->
     <div>
         <a href="#">Sprinkler Installations</a>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -81,8 +80,8 @@
     </div>
     <div>
         <a href="#">Alarm Installations</a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Aliquid, consectetur doloribus dolorum enim facere fugiat, ipsa nam placeat.</p>
+        <p>Fire and security alarms. We will install alarms that will protect your business or
+            home from damages or threats.</p>
     </div>
     <div>
         <a href="#">Alarm Inspections</a>
@@ -102,35 +101,42 @@
 </section>
 
 <section id="homeQuoteSection">
-    <h2>Need work?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Aliquid aperiam atque beatae commodi excepturi fugiat id laudantium placeat quaerat,
-        qui quidem repellendus sunt, voluptate?</p>
+    <h1>Need work?</h1>
+    <p>Does your business need an alarm system or sprinkler system? Or just an inspection for one of your systems? No problem!
+        Feel free to contact us and we will get back to you as soon as possible.</p>
     <button>Request a Quote</button>
 </section>
 
 <footer>
-    <div id="footerLinks">
-        <h1>Services</h1>
-        <a class="footerServiceLinks" href="#">Sprinkler Installations</a>
-        <a class="footerServiceLinks" href="#">Fire Alarm Installations</a>
-        <a class="footerServiceLinks" href="#">Alarm Inspections</a>
-        <a class="footerServiceLinks" href="#">Sprinkler Inspections</a>
-        <a class="footerServiceLinks" href="#">Fire Extinguishers</a>
-    </div>
-    <div id="footerContact">
-        <h1>Contact us</h1>
-        <h3>Phone Number</h3>
-        <p>(123)123-1234</p>
-        <h3>Fax Number</h3>
-        <p>(456)456-4567</p>
-        <h3>Address</h3>
-        <p>739 N 18th St</p>
-        <p>Richmond, IN</p>
-        <p>47374</p>
-        <a href="http://maps.google.com/?q=739 N 18th St, Richmond, IN 47374">
-            <button id="directionBtn">Directions</button>
-        </a>
+    <div id="footerFlexContainer">
+        <div class="footerLinks">
+            <h1>Services</h1>
+            <a class="footerServiceLinks" href="sprinkler-page.html">Sprinkler Installations</a>
+            <a class="footerServiceLinks" href="alarm-page.html">Fire Alarm Installations</a>
+            <a class="footerServiceLinks" href="alarm-page.html">Alarm Inspections</a>
+            <a class="footerServiceLinks" href="sprinkler-page.html">Sprinkler Inspections</a>
+            <a class="footerServiceLinks" href="extinguisher-page.html">Fire Extinguishers</a>
+        </div>
+        <div class="footerLinks">
+            <h1>Company</h1>
+            <a class="footerServiceLinks" href="index.html">Home</a>
+            <a class="footerServiceLinks" href="about.html">About Us</a>
+            <a class="footerServiceLinks" href="contact.html">Contact Us</a>
+        </div>
+        <div id="footerContact">
+            <h1>Contact us</h1>
+            <h3>Phone Number</h3>
+            <p>(123)123-1234</p>
+            <h3>Fax Number</h3>
+            <p>(456)456-4567</p>
+            <h3>Address</h3>
+            <p>739 N 18th St</p>
+            <p>Richmond, IN</p>
+            <p>47374</p>
+            <a href="http://maps.google.com/?q=739 N 18th St, Richmond, IN 47374">
+                <button id="directionBtn">Directions</button>
+            </a>
+        </div>
     </div>
     <p id="copyright">&copy; 2019 Protek Corporation</p>
 </footer>

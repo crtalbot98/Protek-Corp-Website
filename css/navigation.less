@@ -1,0 +1,240 @@
+nav{
+  min-width: 100%;
+  max-width: 100%;
+  height: 4em;
+  border-bottom: 1px solid black;
+  position: fixed;
+  background-color: @gunMetal;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1{
+    margin-left: 1em;
+    color: white;
+  }
+
+  a{
+    margin-left: 1em;
+    text-decoration: none;
+  }
+}
+
+#desktopNav{
+  display: none;
+}
+
+#navMenu{
+  height: 2.5em;
+  width: 3em;
+  margin-right: 1em;
+}
+
+.menuBar{
+  width: auto;
+  height: 0.50em;
+  border-radius: 1em;
+  background-color: @white;
+  margin: 0.25em;
+}
+
+#closeBtn{
+  height: 3em;
+  width: 3em;
+  z-index: 2;
+  float: right;
+  align-self: flex-end;
+}
+
+.closeBar{
+  width: 2em;
+  height: 0.25em;
+  border-radius: 1em;
+  background-color: @white;
+  position: absolute;
+}
+
+#leftBar{
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+#rightBar{
+  transform: rotate(315deg);
+  position: absolute;
+}
+
+#dropDown{
+  visibility: hidden;
+  top: 4em;
+  left: 0;
+  height: 0;
+  position: absolute;
+  min-width: 100%;
+  background-color: @navGray;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  a{
+    opacity: 0;
+  }
+}
+
+#services{
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#serviceLink:hover{
+  #services{
+    visibility: visible;
+    transition: visibility 1s ease-in-out;
+  }
+}
+
+#navMenu:active, #navMenu:hover{
+  cursor: pointer;
+
+  #dropDown{
+    visibility: visible;
+    height: 30em;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+    a{
+      opacity: 1;
+      transition: opacity 0.1s linear;
+    }
+  }
+}
+
+html:active, html:hover{
+  #dropDown {
+    height: 0;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+    a{
+      opacity: 0;
+      transition: opacity 0.1s linear;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1223px){
+  #dropDown, #navMenu, #closeBtn, #mobileTitle{
+    display: none;
+  }
+
+  nav{
+    height: 4em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    max-width: 100%;
+
+    h1{
+      margin: -1em 0 auto 2em;
+      max-width: 100%;
+    }
+  }
+
+  #desktopNav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .aLinks{
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: 0 1em 0 0;
+    max-width: 100%;
+
+    a{
+      margin: 0 1em 0 0;
+      color: @navGray;
+    }
+  }
+
+  .services{
+    align-self: flex-end;
+    margin: 0 2em 0 0;
+    max-width: 100%;
+
+    a{
+      color: @white;
+    }
+  }
+}
+
+@media screen and (min-width: 1224px){
+  #dropDown, #navMenu, #closeBtn, #mobileTitle{
+    display: none;
+  }
+
+  nav{
+    height: 3em;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    max-width: 100%;
+
+    h1{
+      margin: auto 0 auto 2em;
+      max-width: 100%;
+    }
+  }
+
+  #desktopNav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 3em;
+  }
+
+  .aLinks{
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: 0 1em 0 0;
+    max-width: 100%;
+
+    a{
+      margin: 0 1em 0 0;
+      color: @navGray;
+    }
+  }
+
+  .services{
+    align-self: flex-end;
+    margin: 0 2em 0 0;
+    max-width: 100%;
+
+    a{
+      color: @white;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    nav{
+      height: 5em;
+    }
+
+    #desktopNav{
+      height: 5em;
+    }
+  }
+}
+

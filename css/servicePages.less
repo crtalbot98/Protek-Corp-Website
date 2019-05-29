@@ -1,0 +1,133 @@
+#serviceContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#serviceSection{
+    margin: 0 1em 0 1em;
+
+  h1{
+    margin-bottom: 0;
+    font-size: 1.25em;
+  }
+
+  div{
+    margin-bottom: 2em;
+  }
+}
+
+#importanceNotice{
+  background-color: @navGray;
+  width: 100%;
+  margin: 0 0 4em 0;
+  box-sizing: border-box;
+  padding: 2em 1em 2em 1em;
+  text-align: center;
+
+  h1{
+    margin-bottom: 2em;
+    color: @redBtnHover;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  #serviceContainer{
+    align-items: stretch;
+  }
+
+  #servicesExplanationSection{
+    max-width: 100%;
+
+    h1, p{
+      max-width: 90%;
+    }
+  }
+}
+
+@media screen and (min-width: 1224px){
+  #serviceDesktopMargin{
+    margin-bottom: 4em;
+  }
+
+
+  #serviceContainer{
+    height: 30em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2em 0 2em;
+  }
+
+  #serviceContainer.fireExtServiceContainer{
+    height: 40em;
+  }
+
+  #serviceSection {
+    margin-left: 1em;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 3em 0 3em;
+    align-self: center;
+
+    div{
+      margin-bottom: 2em;
+    }
+    h1{
+      margin-top: 0;
+    }
+  }
+
+  #importanceNotice{
+    width: 40%;
+    height: 100%;
+    align-self: flex-start;
+    margin: 0 1em 0 0;
+
+    h1{
+      margin: auto auto 1em auto;
+    }
+
+    p{
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  @supports (-ms-ime-align: auto){
+    #serviceContainer{
+      width: 100%;
+      margin: 0;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 0 4em 0 4em;
+    }
+
+    #importanceNotice{
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1223px){
+  #serviceDesktopMargin{
+    margin-bottom: 0;
+  }
+
+  #serviceSection{
+    margin: auto;
+    width: 60%;
+  }
+
+  #importanceNotice{
+    padding: 4em 0 4em 0;
+    p{
+      width: 60%;
+      margin: auto;
+    }
+  }
+}
