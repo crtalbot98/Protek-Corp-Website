@@ -40,30 +40,32 @@ nav{
   margin: 0.25em;
 }
 
+#menuBar0Open{
+  transform: rotate(45deg) translate(0.5em, 0.5em);
+  transition: 0.25s linear;
+}
+
+#menuBar2Open{
+  transform: rotate(-45deg) translate(0.5em, -0.5em);
+  transition: 0.25s linear;
+}
+
+#menuBar0Closed{
+  transform: rotate(0deg) translate(0em, 0em);
+  transition: 0.25s linear;
+}
+
+#menuBar2Closed{
+  transform: rotate(0deg) translate(0em, 0em);
+  transition: 0.25s linear;
+}
+
 #closeBtn{
   height: 3em;
   width: 3em;
   z-index: 2;
   float: right;
   align-self: flex-end;
-}
-
-.closeBar{
-  width: 2em;
-  height: 0.25em;
-  border-radius: 1em;
-  background-color: @white;
-  position: absolute;
-}
-
-#leftBar{
-  transform: rotate(45deg);
-  position: absolute;
-}
-
-#rightBar{
-  transform: rotate(315deg);
-  position: absolute;
 }
 
 #dropDown{
@@ -90,47 +92,48 @@ nav{
   flex-direction: column;
 }
 
-#serviceLink:hover{
-  #services{
-    visibility: visible;
-    transition: visibility 1s ease-in-out;
-  }
-}
+.no-js{
+  #navMenu:active, #navMenu:hover{
+    cursor: pointer;
 
-#navMenu:active, #navMenu:hover{
-  cursor: pointer;
+    body{
+      overflow: hidden;
+    }
 
-  #dropDown{
-    visibility: visible;
-    height: 30em;
+    #dropDown{
+      visibility: visible;
+      height: 30em;
 
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
-    a{
-      opacity: 1;
-      transition: opacity 0.1s linear;
+      a{
+        opacity: 1;
+        transition: opacity 0.1s linear;
+      }
     }
   }
 }
 
-html:active, html:hover{
-  #dropDown {
-    height: 0;
+.no-js{
+  html:active, html:hover{
+    #dropDown{
+      height: 0;
 
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
-    a{
-      opacity: 0;
-      transition: opacity 0.1s linear;
+      a{
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1223px){
+@media screen and (min-width: 600px) and (max-width: 1223px){
   #dropDown, #navMenu, #closeBtn, #mobileTitle{
     display: none;
   }

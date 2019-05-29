@@ -97,27 +97,28 @@ nav a {
   background-color: #FFFFFF;
   margin: 0.25em;
 }
+#menuBar0Open {
+  transform: rotate(45deg) translate(0.5em, 0.5em);
+  transition: 0.25s linear;
+}
+#menuBar2Open {
+  transform: rotate(-45deg) translate(0.5em, -0.5em);
+  transition: 0.25s linear;
+}
+#menuBar0Closed {
+  transform: rotate(0deg) translate(0em, 0em);
+  transition: 0.25s linear;
+}
+#menuBar2Closed {
+  transform: rotate(0deg) translate(0em, 0em);
+  transition: 0.25s linear;
+}
 #closeBtn {
   height: 3em;
   width: 3em;
   z-index: 2;
   float: right;
   align-self: flex-end;
-}
-.closeBar {
-  width: 2em;
-  height: 0.25em;
-  border-radius: 1em;
-  background-color: #FFFFFF;
-  position: absolute;
-}
-#leftBar {
-  transform: rotate(45deg);
-  position: absolute;
-}
-#rightBar {
-  transform: rotate(315deg);
-  position: absolute;
 }
 #dropDown {
   visibility: hidden;
@@ -140,40 +141,40 @@ nav a {
   display: flex;
   flex-direction: column;
 }
-#serviceLink:hover #services {
-  visibility: visible;
-  transition: visibility 1s ease-in-out;
-}
-#navMenu:active,
-#navMenu:hover {
+.no-js #navMenu:active,
+.no-js #navMenu:hover {
   cursor: pointer;
 }
-#navMenu:active #dropDown,
-#navMenu:hover #dropDown {
+.no-js #navMenu:active body,
+.no-js #navMenu:hover body {
+  overflow: hidden;
+}
+.no-js #navMenu:active #dropDown,
+.no-js #navMenu:hover #dropDown {
   visibility: visible;
   height: 30em;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
-#navMenu:active #dropDown a,
-#navMenu:hover #dropDown a {
+.no-js #navMenu:active #dropDown a,
+.no-js #navMenu:hover #dropDown a {
   opacity: 1;
   transition: opacity 0.1s linear;
 }
-html:active #dropDown,
-html:hover #dropDown {
+.no-js html:active #dropDown,
+.no-js html:hover #dropDown {
   height: 0;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
-html:active #dropDown a,
-html:hover #dropDown a {
+.no-js html:active #dropDown a,
+.no-js html:hover #dropDown a {
   opacity: 0;
   transition: opacity 0.1s linear;
 }
-@media screen and (min-width: 768px) and (max-width: 1223px) {
+@media screen and (min-width: 600px) and (max-width: 1223px) {
   #dropDown,
   #navMenu,
   #closeBtn,
@@ -379,6 +380,11 @@ footer p {
     }
     #copyright {
       position: absolute;
+      margin-top: 26em;
+    }
+  }
+  @-moz-document url-prefix() {
+    #copyright {
       margin-top: 26em;
     }
   }
@@ -616,6 +622,7 @@ footer p {
   #serviceHeader {
     background-color: #F8F8F8;
     margin-top: 4em;
+    padding: 2em 0 1em 4em;
   }
   #servicesExplanationSection {
     display: flex;
@@ -650,6 +657,9 @@ footer p {
   #servicesExplanationSection {
     padding: 4em;
     box-sizing: border-box;
+  }
+  #serviceHeader {
+    padding: 2em 0 1em 5em;
   }
 }
 #serviceContainer {
