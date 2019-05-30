@@ -91,15 +91,19 @@ nav a {
   margin-right: 1em;
 }
 .menuBar {
-  width: auto;
+  width: 3em;
   height: 0.5em;
-  border-radius: 1em;
+  border-radius: 0.1em;
   background-color: #FFFFFF;
   margin: 0.25em;
 }
 #menuBar0Open {
   transform: rotate(45deg) translate(0.5em, 0.5em);
   transition: 0.25s linear;
+}
+#menuBar1Open {
+  visibility: hidden;
+  transition: visibility 0.25s linear;
 }
 #menuBar2Open {
   transform: rotate(-45deg) translate(0.5em, -0.5em);
@@ -108,6 +112,10 @@ nav a {
 #menuBar0Closed {
   transform: rotate(0deg) translate(0em, 0em);
   transition: 0.25s linear;
+}
+#menuBar1Closed {
+  visibility: visible;
+  transition: visibility 0.25s linear;
 }
 #menuBar2Closed {
   transform: rotate(0deg) translate(0em, 0em);
@@ -820,6 +828,8 @@ label span {
   display: inline-block;
   border-radius: 0.5em;
   border: 1px solid #C5C5C5;
+  position: absolute;
+  margin-top: -2em;
 }
 .radioBtnContainer {
   max-width: 12em;
@@ -828,7 +838,7 @@ label span {
   padding: 0;
 }
 input[type=radio] {
-  display: none;
+  opacity: 0;
 }
 label input[type=radio]:hover ~ * {
   background-color: #C5C5C5;

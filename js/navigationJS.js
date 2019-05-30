@@ -70,7 +70,7 @@ changeMenuBarsOpen = (menuBars) =>{
 
     menuBar0.id = "menuBar0Open" ;
 
-    menuBar1.style.visibility = "hidden";
+    menuBar1.id = "menuBar1Open";
 
     menuBar2.id = "menuBar2Open";
 };
@@ -82,7 +82,7 @@ changeMenuBarsClose = (menuBars) =>{
 
     menuBar0.id = "menuBar0Closed";
 
-    menuBar1.style.visibility = "visible";
+    menuBar1.id = "menuBar1Closed";
 
     menuBar2.id = "menuBar2Closed";
 };
