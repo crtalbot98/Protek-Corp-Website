@@ -13,7 +13,7 @@
     <h1 id="mobileTitle">PROTEK CORPORATION</h1>
     <div id="desktopNav">
         <div class="aLinks">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -31,10 +31,10 @@
             <div class="menuBar"></div>
         </div>
         <div id="dropDown" class="no-js">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="sprinkler-page.html">Sprinkler Systems</a>
             <a href="alarm-page.html">Alarm Systems</a>
-            <a href="#">Fire Extinguishers</a>
+            <a href="extinguisher-page.html">Fire Extinguishers</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <form id="contactForm">
+    <form id="contactForm" action="js/server.js" method="POST">
         <div>
             <h1>Contact Us</h1>
             <div class="line"></div>
@@ -96,11 +96,11 @@
         </div>
         <div>
             <label for="phone" class="formLabel">Phone Number</label>
-            <input type="text" name="Phone Number" id="phone">
+            <input type="text" name="Phone_Number" id="phone">
         </div>
         <div>
             <label for="companyName" class="formLabel">Company Name</label>
-            <input type="text" name="Company Name" id="companyName">
+            <input type="text" name="Company_Name" id="companyName">
         </div>
         <div>
             <label for="location" class="formLabel">Location</label>
@@ -110,44 +110,44 @@
             <p>Job Type</p>
             <div class="radioBtnContainer">
                 <label for="sprinklerInstall">
-                <input type="radio" name="Job Type" id="sprinklerInstall" value="Sprinkler Installation">
+                <input type="radio" name="Job Type" id="sprinklerInstall" value="Sprinkler Installation" required>
                    <span>Sprinkler Installation</span>
                 </label>
             </div>
             <div class="radioBtnContainer">
                 <label for="sprinklerInspect">
-                <input type="radio" name="Job Type" value="Sprinkler Inspection" id="sprinklerInspect">
+                <input type="radio" name="Job_Type" value="Sprinkler Inspection" id="sprinklerInspect" required>
                 <span>Sprinkler Inspection</span>
                 </label>
             </div>
             <div class="radioBtnContainer">
                 <label for="alarmInstall">
-                <input type="radio" name="Job Type" value="Alarm Installation" id="alarmInstall">
+                <input type="radio" name="Job_Type" value="Alarm Installation" id="alarmInstall" required>
                 <span>Alarm Installation</span>
                 </label>
             </div>
             <div class="radioBtnContainer">
                 <label for="alarmInspect">
-                <input type="radio" name="Job Type" value="Alarm Inspection" id="alarmInspect">
+                <input type="radio" name="Job_Type" value="Alarm Inspection" id="alarmInspect" required>
                 <span>Alarm Inspection</span>
                 </label>
             </div>
             <div class="radioBtnContainer">
                 <label for="fireExt">
-                <input type="radio" name="Job Type" value="Fire Extinguishers" id="fireExt">
+                <input type="radio" name="Job_Type" value="Fire Extinguishers" id="fireExt" required>
                 <span>Fire Extinguishers</span>
                 </label>
             </div>
             <div class="radioBtnContainer">
                 <label for="noneQuestion">
-                <input type="radio" name="Job Type" value="None/Question" id="noneQuestion">
+                <input type="radio" name="Job_Type" value="None/Question" id="noneQuestion" required>
                 <span>Question</span>
                 </label>
             </div>
         </div>
         <div>
             <label for="message" class="formLabel">Message</label>
-            <textarea name="Message" id="message" maxlength="250" form="contactForm"></textarea>
+            <textarea name="Message" id="message" maxlength="500"></textarea>
         </div>
         <div>
             <button type="submit" id="submitBtn">Submit</button>

@@ -103,7 +103,6 @@ nav a {
 }
 #menuBar1Open {
   visibility: hidden;
-  transition: visibility 0.25s linear;
 }
 #menuBar2Open {
   transform: rotate(-45deg) translate(0.5em, -0.5em);
@@ -115,7 +114,6 @@ nav a {
 }
 #menuBar1Closed {
   visibility: visible;
-  transition: visibility 0.25s linear;
 }
 #menuBar2Closed {
   transform: rotate(0deg) translate(0em, 0em);
