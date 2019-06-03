@@ -55,13 +55,11 @@
     <div id="serviceSection">
         <div>
             <h1>Need Work?</h1>
-            <div class="line"></div>
             <p>Does your business need an alarm system or sprinkler system? Or just an inspection for one of your systems? No problem!
                 Feel free to contact us and we will get back to you as soon as possible.</p>
         </div>
         <div>
             <h1>Why choose us?</h1>
-            <div class="line"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Accusamus ad blanditiis debitis dolorum laudantium natus quas suscipit,
                 vero. Commodi consequatur eum fuga id inventore neque numquam quas sed
@@ -69,14 +67,12 @@
         </div>
         <div>
             <h1>Address</h1>
-            <div class="line"></div>
             <p>739 N 18th St<br>
             Richmond, IN<br>
             47374</p>
         </div>
         <div>
             <h1>Phone Number</h1>
-            <div class="line"></div>
             <p>(123)123-1234</p>
         </div>
     </div>
@@ -84,33 +80,33 @@
     <form id="contactForm" action="js/server.js" method="POST">
         <div>
             <h1>Contact Us</h1>
-            <div class="line"></div>
+            <p>All fields are required</p>
         </div>
         <div>
             <label for="name" class="formLabel">Name</label>
-            <input type="text" name="Name" id="name">
+            <input type="text" name="Name" id="name" required>
         </div>
         <div>
             <label for="email" class="formLabel">Email</label>
-            <input type="email" name="Email" id="email">
+            <input type="email" name="Email" id="email" required>
         </div>
         <div>
             <label for="phone" class="formLabel">Phone Number</label>
-            <input type="text" name="Phone_Number" id="phone">
+            <input type="text" name="Phone_Number" id="phone" required>
         </div>
         <div>
             <label for="companyName" class="formLabel">Company Name</label>
-            <input type="text" name="Company_Name" id="companyName">
+            <input type="text" name="Company_Name" id="companyName" required>
         </div>
         <div>
             <label for="location" class="formLabel">Location</label>
-            <input type="text" name="Location" id="location">
+            <input type="text" name="Location" id="location" required>
         </div>
         <div id="jobTypeSection">
             <p>Job Type</p>
             <div class="radioBtnContainer">
                 <label for="sprinklerInstall">
-                <input type="radio" name="Job Type" id="sprinklerInstall" value="Sprinkler Installation" required>
+                <input type="radio" name="Job_Type" id="sprinklerInstall" value="Sprinkler Installation" required>
                    <span>Sprinkler Installation</span>
                 </label>
             </div>
@@ -147,7 +143,7 @@
         </div>
         <div>
             <label for="message" class="formLabel">Message</label>
-            <textarea name="Message" id="message" maxlength="500"></textarea>
+            <textarea name="Message" id="message" maxlength="500" required></textarea>
         </div>
         <div>
             <button type="submit" id="submitBtn">Submit</button>

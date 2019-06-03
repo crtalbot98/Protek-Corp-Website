@@ -88,9 +88,11 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  box-sizing: border-box;
 
   a{
     opacity: 0;
+    color: black;
   }
 }
 
@@ -110,11 +112,12 @@ nav{
 
     #dropDown{
       visibility: visible;
-      height: 30em;
+      height: 100vh;
 
       transition-property: all;
       transition-duration: 0.5s;
       transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      padding: 0 0 4em 0;
 
       a{
         opacity: 1;
@@ -132,6 +135,7 @@ nav{
       transition-property: all;
       transition-duration: 0.5s;
       transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      padding: 0;
 
       a{
         opacity: 0;

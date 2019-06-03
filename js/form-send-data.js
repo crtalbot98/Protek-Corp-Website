@@ -8,13 +8,22 @@ function getData(){
   form.addEventListener("submit", function(e){
       e.preventDefault();
       for(let i = 0; i<input.length; i++){
-          if(input[i].type === "radio" && input[i].checked || input[i].type !== ""){
+
+          if(input[i].type === "text" || input[i].type === "email"){
               formData[this[i].name] = this[i].value;
-              formData["Message"] = textArea.value;
           }
+
+          if(input[i].type === "radio" && input[i].checked){
+              formData[this[i].name] = this[i].value;
+          }
+
+          formData["Message"] = textArea.value;
+
+          input[i].value = "";
+          textArea.value = "";
       }
 
-      xhttp.open("POST", "http://localhost:80/?getstring=true", true);
+      xhttp.open("POST", "http://localhost:8080/?getstring=true", true);
       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhttp.onreadystatechange=function(){
           if (xhttp.readyState === 4 && xhttp.status === 200){
@@ -22,6 +31,7 @@ function getData(){
               console.log("Data sent to "+string);
           }
       };
+
       xhttp.send(JSON.stringify(formData));
 
       console.log(JSON.stringify(formData));

@@ -138,9 +138,11 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  box-sizing: border-box;
 }
 #dropDown a {
   opacity: 0;
+  color: black;
 }
 #services {
   visibility: hidden;
@@ -158,10 +160,11 @@ nav a {
 .no-js #navMenu:active #dropDown,
 .no-js #navMenu:hover #dropDown {
   visibility: visible;
-  height: 30em;
+  height: 100vh;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  padding: 0 0 4em 0;
 }
 .no-js #navMenu:active #dropDown a,
 .no-js #navMenu:hover #dropDown a {
@@ -174,6 +177,7 @@ nav a {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  padding: 0;
 }
 .no-js html:active #dropDown a,
 .no-js html:hover #dropDown a {

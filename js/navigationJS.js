@@ -33,10 +33,11 @@ navigation = () =>{
 
 openNav = (navMenu, dropDown, dropDownChildren) => {
     dropDown.style.visibility = "visible";
-    dropDown.style.height = "30em";
+    dropDown.style.height = "100vh";
     dropDown.style.transitionProperty = "all";
     dropDown.style.transitionDuration = "0.5s";
     dropDown.style.transitionTimingFunction = "cubic-bezier(0, 1, 0.5, 1)";
+    dropDown.style.padding = "0 0 4em 0";
 
     for(let i = 0; i < dropDownChildren.length; i++){
         if(dropDownChildren[i].innerHTML !== undefined){
@@ -53,6 +54,7 @@ closeNav = (navMenu, dropDown, dropDownChildren) =>{
     dropDown.style.transitionProperty = "all";
     dropDown.styletransitionDuration = "0.5s";
     dropDown.styletransitionTimingFunction = "cubic-bezier(0, 1, 0.5, 1)";
+    dropDown.style.padding = "0";
 
     for(let i = 0; i < dropDownChildren.length; i++){
         if(dropDownChildren[i].innerHTML !== undefined){
