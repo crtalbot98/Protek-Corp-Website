@@ -1,4 +1,4 @@
-onLoad = () => {
+function onLoad() {
     const navMenu = document.getElementById("navMenu");
     const dropDown = document.getElementById("dropDown");
 
@@ -7,9 +7,9 @@ onLoad = () => {
         navMenu.classList.remove("no-js");
         dropDown.classList.remove("no-js");
     });
-};
+}
 
-navigation = () =>{
+function navigation() {
    const navMenu = document.getElementById("navMenu");
    const dropDown = document.getElementById("dropDown");
    const dropDownChildren = dropDown.childNodes;
@@ -29,15 +29,14 @@ navigation = () =>{
            changeMenuBarsClose(menuBars);
        }
    });
-};
+}
 
-openNav = (navMenu, dropDown, dropDownChildren) => {
+function openNav(navMenu, dropDown, dropDownChildren){
     dropDown.style.visibility = "visible";
     dropDown.style.height = "100vh";
     dropDown.style.transitionProperty = "all";
     dropDown.style.transitionDuration = "0.5s";
     dropDown.style.transitionTimingFunction = "cubic-bezier(0, 1, 0.5, 1)";
-    dropDown.style.padding = "0 0 4em 0";
 
     for(let i = 0; i < dropDownChildren.length; i++){
         if(dropDownChildren[i].innerHTML !== undefined){
@@ -46,15 +45,14 @@ openNav = (navMenu, dropDown, dropDownChildren) => {
             dropDownChildren[i].style.display = "block";
         }
     }
-};
+}
 
-closeNav = (navMenu, dropDown, dropDownChildren) =>{
+function closeNav(navMenu, dropDown, dropDownChildren){
     dropDown.style.height = "0";
     dropDown.style.visibility = "none";
     dropDown.style.transitionProperty = "all";
     dropDown.styletransitionDuration = "0.5s";
     dropDown.styletransitionTimingFunction = "cubic-bezier(0, 1, 0.5, 1)";
-    dropDown.style.padding = "0";
 
     for(let i = 0; i < dropDownChildren.length; i++){
         if(dropDownChildren[i].innerHTML !== undefined){
@@ -63,9 +61,9 @@ closeNav = (navMenu, dropDown, dropDownChildren) =>{
             dropDownChildren[i].style.display = "none";
         }
     }
-};
+}
 
-changeMenuBarsOpen = (menuBars) =>{
+function changeMenuBarsOpen(menuBars){
     const menuBar0 = menuBars[0];
     const menuBar1 = menuBars[1];
     const menuBar2 = menuBars[2];
@@ -75,9 +73,9 @@ changeMenuBarsOpen = (menuBars) =>{
     menuBar1.id = "menuBar1Open";
 
     menuBar2.id = "menuBar2Open";
-};
+}
 
-changeMenuBarsClose = (menuBars) =>{
+function changeMenuBarsClose(menuBars){
     const menuBar0 = menuBars[0];
     const menuBar1 = menuBars[1];
     const menuBar2 = menuBars[2];
@@ -87,7 +85,7 @@ changeMenuBarsClose = (menuBars) =>{
     menuBar1.id = "menuBar1Closed";
 
     menuBar2.id = "menuBar2Closed";
-};
+}
 
 onLoad();
 navigation();

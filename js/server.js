@@ -34,7 +34,6 @@ getData = (req) => {
 
 newUserEmail = (userFormData) => {
     const nodeMailer = require("nodemailer");
-    // const xoauth2 = require('xoauth2');
     const userEmail = userFormData.Email;
     const userName = userFormData.Name;
     const userCompany = userFormData.Company_Name;
@@ -53,7 +52,7 @@ newUserEmail = (userFormData) => {
 
     let mailOptions = {
         from: userEmail,
-        to: "chandlertalbot5@hotmail.com",
+        to: "crtalbot98@gmail.com",
         subject: userName+" - "+userJobType,
         text: "Name: "+userName+"\n\n"+"Email: "+userEmail+"\n\n"+"Phone Number: "+userPhoneNum+"\n\n"+"Job Type: "+userJobType+"\n\n"+"Location: "+userLocation+"\n\n"+"Company: "+userCompany+"\n\n"+"Message: "+userMessage
     };

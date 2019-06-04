@@ -144,12 +144,10 @@ input[type=text]:focus{
   }
 
   #jobTypeSection{
-    display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     align-self: flex-start;
-    min-width: 100%;
     height: 15em;
+    min-width: 100%;
     margin: 4em 0 0 0;
 
     p{
@@ -177,8 +175,10 @@ input[type=text]:focus{
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
     #jobTypeSection{
+      min-width: auto;
+      margin-top: 6em;
       p{
-        margin-top: -2em;
+        margin-top: -3em;
       }
     }
   }
@@ -189,6 +189,15 @@ input[type=text]:focus{
       padding: 0 9em 0 9em;
     }
 
+    #jobTypeSection{
+      margin-bottom: 2em;
+      p{
+        margin-top: -14em;
+      }
+    }
+  }
+
+  @-moz-document url-prefix(){
     #jobTypeSection{
       p{
         margin-top: -14em;
