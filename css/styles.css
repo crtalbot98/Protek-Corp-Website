@@ -37,11 +37,17 @@ footer .footerServiceLinks {
   }
 }
 @media screen and (min-width: 1224px) {
-  nav h1 {
-    font-size: 1.5em;
-  }
   .services {
     font-size: 1.05em;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.15em;
   }
 }
 html,
@@ -521,6 +527,15 @@ footer p {
   #homeTitleImage {
     background-image: url("../assets/images/camera-cyber-data-430208.jpg");
   }
+  #sprinklerTitleImage {
+    background-image: url("../assets/images/sprinkler-1529437.jpg");
+  }
+  #alarmTitleImage {
+    background-image: url("../assets/images/fire-alarm-fire-safety-safety-103592.jpg");
+  }
+  #extinguisherTitleImage {
+    background-image: url("../assets/images/blur-bright-close-up-1661377.jpg");
+  }
 }
 @media screen and (min-width: 600px) {
   .titleContainer {
@@ -543,7 +558,6 @@ footer p {
   padding: 2em 0 2em 1em;
 }
 #serviceHeader h1 {
-  font-size: 24px;
   color: #d73b3b;
 }
 #servicesExplanationSection {
@@ -796,7 +810,7 @@ footer p {
   margin: 2em 0 0 0;
 }
 #contactForm input {
-  height: 3em;
+  height: 2em;
   width: 100%;
 }
 #jobTypeSection {
@@ -840,9 +854,6 @@ label input[type=radio]:checked ~ * {
   width: 100%;
   resize: none;
 }
-input[type=text]:focus {
-  border: 1px solid #d73b3b;
-}
 #submitBtn {
   background-color: #d73b3b;
   color: #FFFFFF;
@@ -857,6 +868,14 @@ input[type=text]:focus {
   #contactSection {
     align-items: stretch;
   }
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 @media screen and (min-width: 1224px) {
   #contactSection {
@@ -990,6 +1009,9 @@ input[type=text]:focus {
   position: fixed;
   z-index: 2;
 }
+.preventScroll {
+  overflow: hidden;
+}
 #closeBtn {
   background-color: #F04343;
   border: none;
@@ -998,6 +1020,9 @@ input[type=text]:focus {
   border-radius: 0.1em;
   width: 50%;
   margin-top: 2em;
+}
+#closeBtn:hover {
+  background-color: #d73b3b;
 }
 .hidePopUpDisplay {
   display: none;

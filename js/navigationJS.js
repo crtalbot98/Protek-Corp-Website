@@ -38,6 +38,8 @@ function openNav(navMenu, dropDown, dropDownChildren){
     dropDown.style.transitionDuration = "0.5s";
     dropDown.style.transitionTimingFunction = "cubic-bezier(0, 1, 0.5, 1)";
 
+    document.body.classList.add("preventScroll");
+
     for(let i = 0; i < dropDownChildren.length; i++){
         if(dropDownChildren[i].innerHTML !== undefined){
             dropDownChildren[i].style.opacity = "1";
@@ -53,6 +55,8 @@ function closeNav(navMenu, dropDown, dropDownChildren){
     dropDown.style.transitionProperty = "all";
     dropDown.styletransitionDuration = "0.5s";
     dropDown.styletransitionTimingFunction = "cubic-bezier(0, 1, 0.5, 1)";
+
+    document.body.classList.remove("preventScroll");
 
     for(let i = 0; i < dropDownChildren.length; i++){
         if(dropDownChildren[i].innerHTML !== undefined){
