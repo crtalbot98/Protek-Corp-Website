@@ -52,18 +52,18 @@
     </div>
 </section>
 
-<section class="titleContainer">
-    <div class="titleImage" id="contactTitleImage">
+<section class="title-container">
+    <div class="title-image" id="contact-title-image">
         <div class="overlay">
-            <h3 class="titleText">
+            <h3 class="title-text">
                 CONTACT US TODAY!
             </h3>
         </div>
     </div>
 </section>
 
-<section id="contactSection">
-    <div id="serviceSection">
+<section class="contact-section flex-column-evenly-center">
+    <div class="service-section">
         <div>
             <h1>Need Work?</h1>
             <p>Does your business need an alarm system or sprinkler system? Or just an inspection for one of your systems? No problem!
@@ -93,109 +93,109 @@
             <h1>Contact Us</h1>
             <p>All fields are required</p>
         </div>
-        <div>
+        <div class="inputField">
             <label for="name" class="formLabel">Name</label>
             <input type="text" name="Name" id="name" required>
         </div>
-        <div>
+        <div class="inputField">
             <label for="email" class="formLabel">Email</label>
             <input type="email" name="Email" id="email" required>
         </div>
-        <div>
+        <div class="inputField">
             <label for="phone" class="formLabel">Phone Number</label>
             <input type="number" name="Phone_Number" id="phone" required>
         </div>
-        <div>
+        <div class="inputField">
             <label for="companyName" class="formLabel">Company Name</label>
             <input type="text" name="Company_Name" id="companyName" required>
         </div>
-        <div>
+        <div class="inputField">
             <label for="streetAddress" class="formLabel">Street Address</label>
             <input type="text" name="Street_Address" id="streetAddress" required>
         </div>
-        <div>
+        <div class="inputField">
             <label for="zipCode" class="formLabel">Zip Code</label>
             <input type="number" name="Zip_Code" id="zipCode" required>
         </div>
-        <div id="jobTypeSection">
+        <div id="jobTypeSection" class="inputField">
             <p>Job Type</p>
-            <div class="radioBtnContainer">
+            <div class="radioBtnContainer inputField" >
                 <label for="sprinklerInstall">
                 <input type="radio" name="Job_Type" id="sprinklerInstall" value="Sprinkler Installation" required>
                    <span>Sprinkler Installation</span>
                 </label>
             </div>
-            <div class="radioBtnContainer">
+            <div class="radioBtnContainer inputField">
                 <label for="sprinklerInspect">
                 <input type="radio" name="Job_Type" value="Sprinkler Inspection" id="sprinklerInspect" required>
                 <span>Sprinkler Inspection</span>
                 </label>
             </div>
-            <div class="radioBtnContainer">
+            <div class="radioBtnContainer inputField">
                 <label for="alarmInstall">
                 <input type="radio" name="Job_Type" value="Alarm Installation" id="alarmInstall" required>
                 <span>Alarm Installation</span>
                 </label>
             </div>
-            <div class="radioBtnContainer">
+            <div class="radioBtnContainer inputField">
                 <label for="alarmInspect">
                 <input type="radio" name="Job_Type" value="Alarm Inspection" id="alarmInspect" required>
                 <span>Alarm Inspection</span>
                 </label>
             </div>
-            <div class="radioBtnContainer">
+            <div class="radioBtnContainer inputField">
                 <label for="fireExt">
                 <input type="radio" name="Job_Type" value="Fire Extinguishers" id="fireExt" required>
                 <span>Fire Extinguishers</span>
                 </label>
             </div>
-            <div class="radioBtnContainer">
+            <div class="radioBtnContainer inputField">
                 <label for="noneQuestion">
                 <input type="radio" name="Job_Type" value="None/Question" id="noneQuestion" required>
                 <span>Question</span>
                 </label>
             </div>
         </div>
-        <div>
+        <div class="inputField">
             <label for="message" class="formLabel">Message</label>
             <textarea name="Message" id="message" maxlength="500" required></textarea>
         </div>
-        <div>
+        <div class="inputField">
             <button type="submit" id="submitBtn">Submit</button>
         </div>
     </form>
 </section>
 
-<footer>
-    <div id="footerFlexContainer">
-    <div class="footerLinks">
-        <h1>Services</h1>
-        <a class="footerServiceLinks" href="sprinkler-page.html">Sprinkler Installations</a>
-        <a class="footerServiceLinks" href="alarm-page.html">Fire Alarm Installations</a>
-        <a class="footerServiceLinks" href="alarm-page.html">Alarm Inspections</a>
-        <a class="footerServiceLinks" href="sprinkler-page.html">Sprinkler Inspections</a>
-        <a class="footerServiceLinks" href="extinguisher-page.html">Fire Extinguishers</a>
-    </div>
-    <div class="footerLinks">
-        <h1>Company</h1>
-        <a class="footerServiceLinks" href="index.html">Home</a>
-        <a class="footerServiceLinks" href="about.html">About Us</a>
-        <a class="footerServiceLinks" href="contact-page.html">Contact Us</a>
-    </div>
-    <div id="footerContact">
-        <h1>Contact us</h1>
-        <h3>Phone Number</h3>
-        <p>(765)966-3473</p>
-        <h3>Fax Number</h3>
-        <p>(456)456-4567</p>
-        <h3>Address</h3>
-        <p>739 N 18th St</p>
-        <p>Richmond, IN</p>
-        <p>47374</p>
-        <a href="http://maps.google.com/?q=739 N 18th St, Richmond, IN 47374">
-            <button id="directionBtn">Directions</button>
-        </a>
-    </div>
+<footer class="flex-column-center">
+    <div class="footer-container flex-evenly-start">
+        <div class="footer-links">
+            <h1>Services</h1>
+            <a class="footerServiceLinks" href="sprinkler-page.html">Sprinkler Installations</a>
+            <a class="footerServiceLinks" href="alarm-page.html">Fire Alarm Installations</a>
+            <a class="footerServiceLinks" href="alarm-page.html">Alarm Inspections</a>
+            <a class="footerServiceLinks" href="sprinkler-page.html">Sprinkler Inspections</a>
+            <a class="footerServiceLinks" href="extinguisher-page.html">Fire Extinguishers</a>
+        </div>
+        <div class="footer-links">
+            <h1>Company</h1>
+            <a class="footerServiceLinks" href="index.html">Home</a>
+            <a class="footerServiceLinks" href="about.html">About Us</a>
+            <a class="footerServiceLinks" href="contact-page.html">Contact Us</a>
+        </div>
+        <div class="footer-div-container">
+            <h1>Contact us</h1>
+            <h3>Phone Number</h3>
+            <p>(123)123-1234</p>
+            <h3>Fax Number</h3>
+            <p>(456)456-4567</p>
+            <h3>Address</h3>
+            <p>739 N 18th St</p>
+            <p>Richmond, IN</p>
+            <p>47374</p>
+            <a href="http://maps.google.com/?q=739 N 18th St, Richmond, IN 47374">
+                <button id="directionBtn">Directions</button>
+            </a>
+        </div>
     </div>
     <p id="copyright">&copy; 2019 Protek Corporation</p>
 </footer>
