@@ -48,15 +48,9 @@ function showThankYouNotice(){
     document.body.classList.add("preventScroll");
 }
 
-function hideThankYouNotice(){
-    const popUp = document.getElementById("popUpContainer");
-    const popUpBtn = document.getElementById("closeBtn");
-
-    popUpBtn.addEventListener("click", function(){
-        popUp.classList.add("hidePopUpDisplay");
+document.getElementById("closeBtn").addEventListener("click", function(){
+        document.getElementById("popUpContainer").classList.add("hidePopUpDisplay");
         document.body.classList.remove("preventScroll");
-    });
-}
+});
 
 getData();
-hideThankYouNotice();
