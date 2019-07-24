@@ -1,4 +1,9 @@
-.textBlockHome{
+.text-block-container{
+  width: 90%;
+  margin: auto;
+}
+
+.text-block{
   margin: 2em 1em 2em 1em;
 
   h2{
@@ -6,7 +11,7 @@
   }
 }
 
-#serviceHeader{
+.service-header{
   background-color: @navGray;
   height: 2em;
   margin: 4em 0 0 0;
@@ -17,7 +22,7 @@
   }
 }
 
-#servicesExplanationSection{
+.service-explanation-section{
   width: 100%;
   height: auto;
   padding: 1em 0 1em 0;
@@ -27,6 +32,7 @@
 
   a{
     text-decoration: none;
+    font-weight: bold;
     color: @redBtnHover;
   }
 
@@ -45,15 +51,9 @@
   }
 }
 
-#homeQuoteSection{
-  width: 100%;
+.quote-section{
   height: 20em;
   background-color: @navGray;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   margin: 4em 0 0 0;
 
   p{
@@ -85,44 +85,41 @@
 }
 
 @media screen and (min-width: 1000px){
-  #textBlockContainer{
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .textBlockHome{
+  .text-block-container{
     width: 40%;
-    margin: 2em 4em 2em 4em;
-    //font-size: 1.25em;
+    margin: 0 8em 0 8em;
   }
 
-  #homeQuoteSection{
+  .text-block{
+    width: 40%;
+    margin: 1em 4em 1em 4em;
+  }
+
+  .svg{
+    position: absolute;
+    align-self: flex-end;
+    margin-left: 40em;
+  }
+
+  .quote-section{
     p{
       width: 60%;
-      //font-size: 1.25em;
     }
   }
 
-  #serviceHeader{
+  .service-header{
     background-color: @navGray;
-    margin-top: 4em;
-    padding: 2em 0 1em 4em;
-
+    margin-top: 3em;
+    padding: 2em 0 1em 9em;
   }
 
-  #servicesExplanationSection{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    height: 30em;
-    padding: 1em 3em 1em 3em;
+  .service-explanation-section{
+    height: 32em;
+    padding: 1em 8em 1em 8em;
     box-sizing: border-box;
 
-    h1{
-      position: absolute;
-      margin: 0 0 0 0.75em;
+    a{
+      font-size: 1.25em;
     }
 
     div{
@@ -132,7 +129,7 @@
   }
 
   @supports (-ms-ime-align: auto){
-    .textBlockHome{
+    .text-block{
       width: 100%;
       margin: 2em 4em 2em 4em;
     }
@@ -140,17 +137,17 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 999px){
-  #textBlockContainer{
+  .text-block-container{
     width: 80%;
     margin: auto;
   }
 
-  #servicesExplanationSection{
+  .service-explanation-section{
     padding: 4em;
     box-sizing: border-box;
   }
 
-  #serviceHeader{
+  .service-header{
     padding: 2em 0 1em 5em;
   }
 }

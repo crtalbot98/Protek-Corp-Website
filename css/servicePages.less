@@ -1,12 +1,4 @@
-#serviceContainer{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-#serviceSection{
+.service-section{
     margin: 0 1em 0 1em;
 
   h1{
@@ -34,10 +26,6 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-  #serviceContainer{
-    align-items: stretch;
-  }
-
   #servicesExplanationSection{
     max-width: 100%;
 
@@ -52,8 +40,7 @@
     margin-bottom: 4em;
   }
 
-
-  #serviceContainer{
+  .service-container{
     height: 30em;
     display: flex;
     justify-content: space-evenly;
@@ -63,11 +50,11 @@
     padding: 0 2em 0 2em;
   }
 
-  #serviceContainer.fireExtServiceContainer{
+  .service-container.fireExtServiceContainer{
     height: 40em;
   }
 
-  #serviceSection {
+  .service-section {
     margin-left: 1em;
     width: 50%;
     box-sizing: border-box;
@@ -99,7 +86,7 @@
   }
 
   @supports (-ms-ime-align: auto){
-    #serviceContainer{
+    .service-container{
       width: 100%;
       margin: 0;
       justify-content: space-between;
@@ -114,11 +101,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1223px){
-  #serviceDesktopMargin{
+  .serviceDesktopMargin{
     margin-bottom: 0;
   }
 
-  #serviceSection{
+  .service-section{
     margin: auto;
     width: 85%;
   }

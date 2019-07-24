@@ -55,8 +55,7 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  height: 100%;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 @keyframes loadIn {
   from {
@@ -64,6 +63,74 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+.flex-column-evenly-center {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  .flex-row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .flex-evenly-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  footer .flex-column-center {
+    flex-direction: row;
+  }
+  section.contact-section.flex-column-evenly-center {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+  @supports (-ms-ime-align: auto) {
+    .flex-column-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .flex-evenly-start {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+  section.contact-section.flex-column-evenly-center {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  .flex-evenly-start {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .flex-evenly-start {
+    justify-content: space-between;
   }
 }
 nav {
@@ -277,11 +344,6 @@ footer {
   width: 100%;
   bottom: 0;
   background-color: #2B3039;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
   padding: 1em 0 1em 0;
   margin-top: 4em;
 }
@@ -301,18 +363,18 @@ footer .footerServiceLinks {
 footer p {
   margin: 0;
 }
-.footerLinks {
+.footer-links {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.footerLinks:nth-child(2) {
+.footer-links:nth-child(2) {
   margin-top: 2em;
 }
 #copyright {
   margin: 3em 0 0 0;
 }
-#footerContact {
+.footer-div-container {
   margin-top: 2em;
 }
 #directionBtn {
@@ -331,19 +393,10 @@ footer p {
 }
 @media screen and (min-width: 1000px) {
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
     margin-top: 6em;
   }
-  #footerFlexContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: flex-start;
-    align-items: flex-start;
+  .footer-container {
     margin: 2em 4em 2em 4em;
     width: 100%;
   }
@@ -351,32 +404,26 @@ footer p {
     position: absolute;
     margin-top: 13em;
   }
-  .footerLinks {
+  .footer-links {
     text-align: left;
+    margin: 0 0 0 0;
+  }
+  .footer-links:nth-child(2) {
     margin-top: 0;
   }
   .footerLinks:nth-child(2) {
     margin-top: 0;
   }
-  #footerContact {
+  .footer-div-container {
     text-align: left;
     align-self: flex-start;
     margin: 0;
   }
   @supports (-ms-ime-align: auto) {
     footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       margin-top: 6em;
     }
-    #footerFlexContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-content: flex-start;
-      align-items: flex-start;
+    .footer-container {
       box-sizing: border-box;
       padding: 1em 12em 0 12em;
     }
@@ -403,21 +450,13 @@ footer p {
     margin-left: -5em;
     margin-top: -1em;
   }
-  #footerFlexContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: flex-start;
-    align-items: flex-start;
+  #footer-container {
     padding: 0 20em 0 20em;
     box-sizing: border-box;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
   footer {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
     padding: 2em 2em 1em 2em;
     box-sizing: border-box;
     height: 28em;
@@ -425,40 +464,37 @@ footer p {
   footer a {
     margin-top: 1em;
   }
-  #footerFlexContainer {
+  .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 80%;
   }
-  .footerLinks {
+  .footer-links {
     align-content: flex-start;
     justify-content: space-between;
     text-align: left;
     margin-left: 0;
     padding: 0;
   }
-  .footerLinks:nth-child(2) {
+  .footer-links:nth-child(2) {
     height: 60%;
     margin-top: 0;
   }
-  #footerContact {
+  .footer-div-container {
     text-align: right;
     margin: 0 0 0 0;
   }
-  #footerContact h3 {
+  .footer-div-container h3 {
     margin-top: 1em;
   }
   #copyright {
     position: absolute;
-    align-self: flex-end;
-    text-align: center;
-    margin: 0;
-    width: 100%;
+    margin-top: 13em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 999px) and screen and (-ms-high-contrast: active), screen and (min-width: 768px) and (max-width: 999px) and (-ms-high-contrast: none) {
-  #footerFlexContainer {
+  .footer-container {
     margin: auto;
   }
   #copyright {
@@ -466,7 +502,7 @@ footer p {
     margin: 5em -20em 0 0;
   }
 }
-.titleContainer {
+.title-container {
   height: auto;
   width: 100%;
   animation: loadIn 2s;
@@ -480,37 +516,39 @@ footer p {
   justify-content: center;
   align-items: center;
 }
-.titleImage {
+.title-image {
   height: 100%;
   max-width: 100%;
   background-position: center;
   background-size: cover;
 }
-.titleText {
+.title-text {
   color: white;
   font-size: 1.5em;
   margin-top: 12em;
+  text-align: center;
+  width: 90%;
 }
-#homeTitleImage {
+#home-title-image {
   background-image: url("../assets/images/camera-cyber-data-430208-mobile.jpg");
 }
-#aboutTitleImage {
+#about-title-image {
   background-image: url("../assets/images/15120-architecture-blue-269077.jpg");
 }
-#sprinklerTitleImage {
+#sprinkler-title-image {
   background-image: url("../assets/images/sprinkler-1529437.jpg");
 }
-#alarmTitleImage {
+#alarm-title-image {
   background-image: url("../assets/images/fire-alarm-fire-safety-safety-103592.jpg");
 }
-#extinguisherTitleImage {
+#extinguisher-title-image {
   background-image: url("../assets/images/blur-bright-close-up-1661377.jpg");
 }
-#contactTitleImage {
+#contact-title-image {
   background-image: url("../assets/images/access-adult-blur-261628.jpg");
 }
 @media screen and (min-width: 1000px) {
-  .titleContainer {
+  .title-container {
     height: auto;
     margin-bottom: 6em;
   }
@@ -519,48 +557,55 @@ footer p {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     display: block;
   }
-  .titleText {
+  .title-text {
     font-size: 2em;
     margin: 8em 0 0 1em;
     position: absolute;
   }
-  #homeTitleImage {
+  #home-title-image {
     background-image: url("../assets/images/camera-cyber-data-430208.jpg");
   }
-  #sprinklerTitleImage {
+  #sprinkler-title-image {
     background-image: url("../assets/images/sprinkler-1529437.jpg");
   }
-  #alarmTitleImage {
+  #alarm-title-image {
     background-image: url("../assets/images/fire-alarm-fire-safety-safety-103592.jpg");
   }
-  #extinguisherTitleImage {
+  #extinguisher-title-image {
     background-image: url("../assets/images/blur-bright-close-up-1661377.jpg");
   }
 }
 @media screen and (min-width: 600px) {
-  .titleContainer {
+  .title-container {
     height: 500px;
+  }
+  .title-text {
+    text-align: left;
   }
   .overlay {
     height: 500px;
   }
 }
-.textBlockHome {
+.text-block-container {
+  width: 90%;
+  margin: auto;
+}
+.text-block {
   margin: 2em 1em 2em 1em;
 }
-.textBlockHome h2 {
+.text-block h2 {
   margin-bottom: 0;
 }
-#serviceHeader {
+.service-header {
   background-color: #F8F8F8;
   height: 2em;
   margin: 4em 0 0 0;
   padding: 2em 0 2em 1em;
 }
-#serviceHeader h1 {
+.service-header h1 {
   color: #d73b3b;
 }
-#servicesExplanationSection {
+.service-explanation-section {
   width: 100%;
   height: auto;
   padding: 1em 0 1em 0;
@@ -568,36 +613,31 @@ footer p {
   background-color: #F8F8F8;
   box-sizing: border-box;
 }
-#servicesExplanationSection a {
+.service-explanation-section a {
   text-decoration: none;
+  font-weight: bold;
   color: #d73b3b;
 }
-#servicesExplanationSection div {
+.service-explanation-section div {
   margin: 0 1em 0 1em;
 }
-#servicesExplanationSection h1 {
+.service-explanation-section h1 {
   text-align: center;
   color: #d73b3b;
   margin-bottom: 2em;
 }
-#servicesExplanationSection h2 {
+.service-explanation-section h2 {
   color: #d73b3b;
 }
-#homeQuoteSection {
-  width: 100%;
+.quote-section {
   height: 20em;
   background-color: #F8F8F8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   margin: 4em 0 0 0;
 }
-#homeQuoteSection p {
+.quote-section p {
   margin: 0 1em 2em 1em;
 }
-#homeQuoteSection button {
+.quote-section button {
   background-color: #F04343;
   height: 3em;
   width: 14em;
@@ -606,7 +646,7 @@ footer p {
   color: #FFFFFF;
   margin-bottom: 1em;
 }
-#homeQuoteSection button:hover {
+.quote-section button:hover {
   background-color: #d73b3b;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -618,75 +658,67 @@ footer p {
   }
 }
 @media screen and (min-width: 1000px) {
-  #textBlockContainer {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .textBlockHome {
+  .text-block-container {
     width: 40%;
-    margin: 2em 4em 2em 4em;
+    margin: 0 8em 0 8em;
   }
-  #homeQuoteSection p {
+  .text-block {
+    width: 40%;
+    margin: 1em 4em 1em 4em;
+  }
+  .svg {
+    position: absolute;
+    align-self: flex-end;
+    margin-left: 40em;
+  }
+  .quote-section p {
     width: 60%;
   }
-  #serviceHeader {
+  .service-header {
     background-color: #F8F8F8;
-    margin-top: 4em;
-    padding: 2em 0 1em 4em;
+    margin-top: 3em;
+    padding: 2em 0 1em 9em;
   }
-  #servicesExplanationSection {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    height: 30em;
-    padding: 1em 3em 1em 3em;
+  .service-explanation-section {
+    height: 32em;
+    padding: 1em 8em 1em 8em;
     box-sizing: border-box;
   }
-  #servicesExplanationSection h1 {
-    position: absolute;
-    margin: 0 0 0 0.75em;
+  .service-explanation-section a {
+    font-size: 1.25em;
   }
-  #servicesExplanationSection div {
+  .service-explanation-section div {
     margin: 0 1em 0 1em;
     width: 40%;
   }
   @supports (-ms-ime-align: auto) {
-    .textBlockHome {
+    .text-block {
       width: 100%;
       margin: 2em 4em 2em 4em;
     }
   }
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
-  #textBlockContainer {
+  .text-block-container {
     width: 80%;
     margin: auto;
   }
-  #servicesExplanationSection {
+  .service-explanation-section {
     padding: 4em;
     box-sizing: border-box;
   }
-  #serviceHeader {
+  .service-header {
     padding: 2em 0 1em 5em;
   }
 }
-#serviceContainer {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-#serviceSection {
+.service-section {
   margin: 0 1em 0 1em;
 }
-#serviceSection h1 {
+.service-section h1 {
   margin-bottom: 0;
   font-size: 1.25em;
 }
-#serviceSection div {
+.service-section div {
   margin-bottom: 2em;
 }
 #importanceNotice {
@@ -702,9 +734,6 @@ footer p {
   color: #d73b3b;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  #serviceContainer {
-    align-items: stretch;
-  }
   #servicesExplanationSection {
     max-width: 100%;
   }
@@ -717,7 +746,7 @@ footer p {
   #serviceDesktopMargin {
     margin-bottom: 4em;
   }
-  #serviceContainer {
+  .service-container {
     height: 30em;
     display: flex;
     justify-content: space-evenly;
@@ -726,20 +755,20 @@ footer p {
     box-sizing: border-box;
     padding: 0 2em 0 2em;
   }
-  #serviceContainer.fireExtServiceContainer {
+  .service-container.fireExtServiceContainer {
     height: 40em;
   }
-  #serviceSection {
+  .service-section {
     margin-left: 1em;
     width: 50%;
     box-sizing: border-box;
     padding: 0 3em 0 3em;
     align-self: center;
   }
-  #serviceSection div {
+  .service-section div {
     margin-bottom: 2em;
   }
-  #serviceSection h1 {
+  .service-section h1 {
     margin-top: 0;
   }
   #importanceNotice {
@@ -756,7 +785,7 @@ footer p {
     margin: auto;
   }
   @supports (-ms-ime-align: auto) {
-    #serviceContainer {
+    .service-container {
       width: 100%;
       margin: 0;
       justify-content: space-between;
@@ -769,10 +798,10 @@ footer p {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1223px) {
-  #serviceDesktopMargin {
+  .serviceDesktopMargin {
     margin-bottom: 0;
   }
-  #serviceSection {
+  .service-section {
     margin: auto;
     width: 85%;
   }
@@ -784,42 +813,40 @@ footer p {
     margin: auto;
   }
 }
-#contactSection {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
+.contact-section {
   width: 100%;
+  margin-top: 3em;
 }
-#contactForm {
+form {
   margin-top: 4em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 95%;
   padding: 0;
 }
-#contactForm div {
+form input {
+  height: 2em;
+  width: 100%;
+}
+.btn {
+  padding: 1em 2em 1em 2em;
+  background-color: #F04343;
+  color: #FFFFFF;
+  border-radius: 0.25em;
+  text-decoration: none;
+}
+.formLabel {
+  margin: 2em 0 0 0;
+}
+.inputField {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
 }
-#contactForm .formLabel {
-  margin: 2em 0 0 0;
-}
-#contactForm input {
-  height: 2em;
-  width: 100%;
-}
 #jobTypeSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#jobTypeSection p {
-  font-size: 16px;
 }
 label span {
   background-color: #F8F8F8;
@@ -865,7 +892,7 @@ label input[type=radio]:checked ~ * {
   margin-top: 4em;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  #contactSection {
+  .contact-section {
     align-items: stretch;
   }
 }
@@ -878,52 +905,50 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 @media screen and (min-width: 1224px) {
-  #contactSection {
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 0 10em 0 10em;
+  .contact-section {
+    padding: 0;
     box-sizing: border-box;
     margin: 0;
   }
-  #contactSection #serviceSection {
+  .contact-section .service-section {
     height: 30em;
     width: 30em;
     margin: 0;
     align-self: flex-start;
     padding: 0;
   }
-  #contactForm {
+  form {
     margin: 0;
     width: 30em;
     align-self: flex-start;
     justify-content: space-between;
   }
-  #contactForm input {
+  form input {
     width: 100%;
   }
-  #contactForm label,
-  #contactForm p {
+  form label,
+  form p {
     font-size: 20px;
+    margin: 0;
   }
-  #contactForm h1 {
+  form h1 {
     align-self: flex-start;
     font-size: 20px;
     margin-top: 0;
   }
-  #contactForm .line {
+  form .line {
     width: 100%;
   }
   #jobTypeSection {
     flex-wrap: wrap;
     align-self: flex-start;
     height: 15em;
-    min-width: 100%;
     margin: 4em 0 0 0;
   }
   #jobTypeSection p {
     position: absolute;
     align-self: flex-start;
-    margin: -7em 0 0 1em;
+    margin: -7em 0 0 0;
   }
   #message {
     width: 100%;
@@ -939,7 +964,7 @@ input[type="number"] {
     padding: 1em 0 1em 0;
   }
   @supports (-ms-ime-align: auto) {
-    #contactSection {
+    .contact-section {
       width: 100%;
       padding: 0 9em 0 9em;
     }
@@ -966,9 +991,13 @@ input[type="number"] {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1223px) {
-  #contactSection {
-    padding: 0 4em 0 4em;
+  .contact-section {
+    padding: 0 1em 0 1em;
     box-sizing: border-box;
+  }
+  .service-section {
+    margin: auto;
+    width: 80%;
   }
   #jobTypeSection {
     display: flex;
@@ -986,6 +1015,16 @@ input[type="number"] {
   #submitBtn {
     height: 3em;
     width: 60%;
+  }
+  form {
+    width: 80%;
+    margin: 2em auto;
+  }
+  .inputField {
+    margin: 0 auto;
+  }
+  #jobTypeSection p {
+    margin: -2em auto auto -20em;
   }
 }
 #popUp {

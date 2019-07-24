@@ -1,4 +1,4 @@
-.titleContainer{
+.title-container{
   height: auto;
   width: 100%;
   animation: loadIn 2s;
@@ -14,45 +14,47 @@
   align-items: center;
 }
 
-.titleImage{
+.title-image{
   height: 100%;
   max-width: 100%;
   background-position: center;
   background-size: cover;
 }
 
-.titleText{
+.title-text{
   color: white;
   font-size: 1.50em;
   margin-top: 12em;
+  text-align: center;
+  width: 90%;
 }
 
-#homeTitleImage{
+#home-title-image{
   background-image: url("../assets/images/camera-cyber-data-430208-mobile.jpg");
 }
 
-#aboutTitleImage{
+#about-title-image{
   background-image: url("../assets/images/15120-architecture-blue-269077.jpg");
 }
 
-#sprinklerTitleImage{
+#sprinkler-title-image{
   background-image: url("../assets/images/sprinkler-1529437.jpg");
 }
 
-#alarmTitleImage{
+#alarm-title-image{
   background-image: url("../assets/images/fire-alarm-fire-safety-safety-103592.jpg");
 }
 
-#extinguisherTitleImage{
+#extinguisher-title-image{
   background-image: url("../assets/images/blur-bright-close-up-1661377.jpg");
 }
 
-#contactTitleImage{
+#contact-title-image{
   background-image: url("../assets/images/access-adult-blur-261628.jpg");
 }
 
 @media screen and (min-width: 1000px){
-  .titleContainer{
+  .title-container{
     height: auto;
     margin-bottom: 6em;
   }
@@ -63,29 +65,33 @@
     display: block;
   }
 
-  .titleText{
+  .title-text{
     font-size: 2em;
     margin: 8em 0 0 1em;
     position: absolute;
   }
 
-  #homeTitleImage{
+  #home-title-image{
     background-image: url("../assets/images/camera-cyber-data-430208.jpg");
   }
-  #sprinklerTitleImage{
+  #sprinkler-title-image{
     background-image: url("../assets/images/sprinkler-1529437.jpg");
   }
-  #alarmTitleImage{
+  #alarm-title-image{
     background-image: url("../assets/images/fire-alarm-fire-safety-safety-103592.jpg");
   }
-  #extinguisherTitleImage{
+  #extinguisher-title-image{
     background-image: url("../assets/images/blur-bright-close-up-1661377.jpg");
   }
 }
 
 @media screen and (min-width: 600px){
-  .titleContainer{
+  .title-container{
     height: 500px;
+  }
+
+  .title-text{
+    text-align: left;
   }
 
   .overlay{
