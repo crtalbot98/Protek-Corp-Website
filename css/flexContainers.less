@@ -1,0 +1,84 @@
+.flex-column-evenly-center{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-column-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 1224px){
+
+}
+
+@media screen and (min-width: 1000px){
+  .flex-row-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .flex-evenly-start{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  footer{
+    .flex-column-center{
+      flex-direction: row;
+    }
+  }
+
+  section.contact-section.flex-column-evenly-center{
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  @supports (-ms-ime-align: auto){
+   .flex-column-center{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    }
+
+    .flex-evenly-start{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1223px){
+  section.contact-section.flex-column-evenly-center{
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px){
+  .flex-evenly-start{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  .flex-evenly-start{
+    justify-content: space-between;
+  }
+}

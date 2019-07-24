@@ -12,14 +12,12 @@ nav{
   align-items: center;
 
   h1{
-    font-size: 1.25em;
     margin-left: 1em;
     color: white;
   }
 
   a{
     margin-left: 1em;
-    font-size: 1.25em;
     text-decoration: none;
   }
 }
@@ -35,37 +33,39 @@ nav{
 }
 
 .menuBar{
-  width: auto;
+  width: 3em;
   height: 0.50em;
-  border-radius: 1em;
+  border-radius: 0.10em;
   background-color: @white;
   margin: 0.25em;
 }
 
-#closeBtn{
-  height: 3em;
-  width: 3em;
-  z-index: 2;
-  float: right;
-  align-self: flex-end;
+#menuBar0Open{
+  transform: rotate(45deg) translate(0.5em, 0.5em);
+  transition: 0.25s linear;
 }
 
-.closeBar{
-  width: 2em;
-  height: 0.25em;
-  border-radius: 1em;
-  background-color: @white;
-  position: absolute;
+#menuBar1Open{
+  visibility: hidden;
 }
 
-#leftBar{
-  transform: rotate(45deg);
-  position: absolute;
+#menuBar2Open{
+  transform: rotate(-45deg) translate(0.5em, -0.5em);
+  transition: 0.25s linear;
 }
 
-#rightBar{
-  transform: rotate(315deg);
-  position: absolute;
+#menuBar0Closed{
+  transform: rotate(0deg) translate(0em, 0em);
+  transition: 0.25s linear;
+}
+
+#menuBar1Closed{
+  visibility: visible;
+}
+
+#menuBar2Closed{
+  transform: rotate(0deg) translate(0em, 0em);
+  transition: 0.25s linear;
 }
 
 #dropDown{
@@ -73,17 +73,17 @@ nav{
   top: 4em;
   left: 0;
   height: 0;
-  position: fixed;
-  z-index: 2;
+  position: absolute;
   min-width: 100%;
   background-color: @navGray;
   border-bottom: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  padding: 0;
+  box-sizing: border-box;
 
   a{
     opacity: 0;
+    margin-top: 3em;
+    color: black;
   }
 }
 
@@ -93,59 +93,60 @@ nav{
   flex-direction: column;
 }
 
-#serviceLink:hover{
-  #services{
-    visibility: visible;
-    transition: visibility 1s ease-in-out;
-  }
-}
+.no-js{
+  #navMenu:active, #navMenu:hover{
+    cursor: pointer;
 
-#navMenu:hover{
-  #dropDown{
-    visibility: visible;
-    height: 30em;
+    body{
+      overflow: hidden;
+    }
 
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    #dropDown{
+      visibility: visible;
+      height: 100vh;
 
-    a{
-      opacity: 1;
-      transition: opacity 0.1s linear;
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+      a{
+        opacity: 1;
+        transition: opacity 0.1s linear;
+      }
     }
   }
 }
 
-html:hover {
-  #dropDown {
-    height: 0;
+.no-js{
+  html:active, html:hover{
+    #dropDown{
+      height: 0;
 
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
-    a{
-      opacity: 0;
-      transition: opacity 0.1s linear;
+      a{
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1223px){
-  #dropDown, #navMenu, #closeBtn, #mobileTitle{
+@media screen and (min-width: 600px) and (max-width: 1223px){
+  #dropDown, #navMenu, #mobileTitle{
     display: none;
   }
 
   nav{
-    height: 5em;
+    height: 4em;
     padding-top: 1.25em;
     padding-bottom: 1.25em;
     max-width: 100%;
-    font-size: 0.85em;
 
     h1{
       margin: -1em 0 auto 2em;
-      font-size: 1.5em;
       max-width: 100%;
     }
   }
@@ -174,7 +175,6 @@ html:hover {
   .services{
     align-self: flex-end;
     margin: 0 2em 0 0;
-    font-size: 1.05em;
     max-width: 100%;
 
     a{
@@ -184,7 +184,7 @@ html:hover {
 }
 
 @media screen and (min-width: 1224px){
-  #dropDown, #navMenu, #closeBtn, #mobileTitle{
+  #dropDown, #navMenu, #mobileTitle{
     display: none;
   }
 
@@ -196,7 +196,6 @@ html:hover {
 
     h1{
       margin: auto 0 auto 2em;
-      font-size: 1.5em;
       max-width: 100%;
     }
   }
@@ -225,11 +224,20 @@ html:hover {
   .services{
     align-self: flex-end;
     margin: 0 2em 0 0;
-    font-size: 1.05em;
     max-width: 100%;
 
     a{
       color: @white;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    nav{
+      height: 5em;
+    }
+
+    #desktopNav{
+      height: 5em;
     }
   }
 }

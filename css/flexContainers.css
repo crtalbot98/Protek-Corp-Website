@@ -1,0 +1,13 @@
+.flexColumnEvenlyCenter {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1224px) {
+  .flexColumnEvenlyCenter {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+/*# sourceMappingURL=flexContainers.css.map */

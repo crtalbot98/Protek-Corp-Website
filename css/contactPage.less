@@ -1,0 +1,257 @@
+.contact-section{
+  width: 100%;
+  margin-top: 3em;
+}
+
+form{
+  margin-top: 4em;
+  width: 95%;
+  padding: 0;
+
+  input{
+    height: 2em;
+    width: 100%;
+  }
+}
+
+.btn{
+  padding: 1em 2em 1em 2em;
+  background-color: @redBtn;
+  color: @white;
+  border-radius: 0.25em;
+  text-decoration: none;
+}
+
+.formLabel{
+  margin: 2em 0 0 0;
+}
+
+.inputField{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
+
+#jobTypeSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ label span{
+  background-color: @navGray;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+  align-self: center;
+  width: 10em;
+  display: inline-block;
+  border-radius: 0.50em;
+  border: 1px solid @textGray;
+   position: absolute;
+   margin-top: -2em;
+}
+
+.radioBtnContainer{
+  max-width: 12em;
+  height: 5em;
+  align-self: center;
+  padding: 0;
+}
+
+input[type=radio]{
+  opacity: 0;
+}
+
+label input[type=radio]:hover ~ *{
+  background-color: @textGray;
+}
+
+label input[type=radio]:checked ~ *{
+  background-color: @redBtnHover;
+  color: @white;
+}
+
+#message{
+  height: 6em;
+  width: 100%;
+  resize: none;
+}
+
+#submitBtn{
+  background-color: @redBtnHover;
+  color: @white;
+  height: 3em;
+  width: 90%;
+  align-self: center;
+  border: none;
+  border-radius: 0.50em;
+  margin-top: 4em;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+  .contact-section{
+    align-items: stretch;
+  }
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ input[type="number"]{
+    -moz-appearance:textfield;
+ }
+
+
+@media screen and (min-width: 1224px){
+  .contact-section{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+
+    .service-section{
+      height: 30em;
+      width: 30em;
+      margin: 0;
+      align-self: flex-start;
+      padding: 0;
+    }
+  }
+
+  form{
+    margin: 0;
+    width: 30em;
+    align-self: flex-start;
+    justify-content: space-between;
+
+    input{
+      width: 100%;
+    }
+
+    label, p{
+      font-size: 20px;
+      margin: 0;
+    }
+
+    h1{
+      align-self: flex-start;
+      font-size: 20px;
+      margin-top: 0;
+    }
+    .line{
+      width: 100%;
+    }
+  }
+
+  #jobTypeSection{
+    flex-wrap: wrap;
+    align-self: flex-start;
+    height: 15em;
+    margin: 4em 0 0 0;
+
+    p{
+      position: absolute;
+      align-self: flex-start;
+      margin: -7em 0 0 0;
+    }
+  }
+
+  #message{
+    width: 100%;
+  }
+
+  label span{
+       background-color: @navGray;
+       min-width: 8em;
+       padding: 1em;
+       font-size: 0.75em;
+     }
+
+  #submitBtn{
+    font-size: 1em;
+    padding: 1em 0 1em 0;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    #jobTypeSection{
+      min-width: auto;
+      margin-top: 6em;
+      p{
+        margin-top: -3em;
+      }
+    }
+  }
+
+  @supports (-ms-ime-align: auto){
+    .contact-section{
+      width: 100%;
+      padding: 0 9em 0 9em;
+    }
+
+    #jobTypeSection{
+      margin-bottom: 2em;
+      p{
+        margin-top: -14em;
+      }
+    }
+  }
+
+  @-moz-document url-prefix(){
+    #jobTypeSection{
+      p{
+        margin-top: -14em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1223px){
+    .contact-section{
+      padding: 0 1em 0 1em;
+      box-sizing: border-box;
+    }
+
+    .service-section{
+      margin: auto;
+      width: 80%;
+    }
+
+    #jobTypeSection{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 30em;
+      height: 15em;
+      margin: 3em auto 0 auto;
+
+      p{
+        position: absolute;
+        align-self: flex-start;
+        margin-top: -8em;
+      }
+    }
+
+    #submitBtn{
+      height: 3em;
+      width: 60%;
+    }
+
+    form{
+      width: 80%;
+      margin: 2em auto;
+    }
+
+    .inputField{
+      margin: 0 auto;
+    }
+
+    #jobTypeSection{
+      p{
+        margin: -2em auto auto -20em;
+      }
+    }
+}
