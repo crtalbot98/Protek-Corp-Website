@@ -4,11 +4,21 @@
 }
 
 .text-block{
-  margin: 2em 1em 2em 1em;
+  margin: 2em 0 2em 0;
 
   h2{
     margin-bottom: 0;
   }
+}
+
+.about-history{
+  margin: 2em auto;
+  width: 90%;
+}
+
+.about-img{
+  align-self: center;
+  margin: auto;
 }
 
 .service-header{
@@ -76,7 +86,7 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  #homeQuoteSection{
+  .quote-section{
     max-width: 100%;
     p{
       max-width: 90%;
@@ -86,13 +96,39 @@
 
 @media screen and (min-width: 1000px){
   .text-block-container{
-    width: 40%;
-    margin: 0 8em 0 8em;
+    margin: 0 6em 0 6em;
+    display: flex;
+    width: auto;
+  }
+
+  section.text-block-container.flex-column-evenly-center{
+    width: 45%;
+    margin: 0 9em 0 9em;
   }
 
   .text-block{
-    width: 40%;
-    margin: 1em 4em 1em 4em;
+    margin: 1em auto 1em auto;
+
+    p{
+      width: 18em;
+    }
+  }
+
+  .about-history{
+    width: 85%;
+    margin: 5em 0 5em 10em;
+    display: flex;
+    flex-direction: column;
+
+    p{
+      width: 60%;
+    }
+  }
+
+  .about-img{
+    position: absolute;
+    align-self: flex-end;
+    margin: 6em 2em 0 0;
   }
 
   .svg{

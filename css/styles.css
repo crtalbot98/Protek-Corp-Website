@@ -78,6 +78,14 @@ body {
   align-items: center;
   text-align: center;
 }
+@media screen and (min-width: 1224px) {
+  section.service-container.flex-column-evenly-center {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 1000px) {
   .flex-row-wrap {
     display: flex;
@@ -197,7 +205,7 @@ nav a {
   height: 0;
   position: absolute;
   min-width: 100%;
-  background-color: #F8F8F8;
+  background-color: #ededed;
   border-bottom: 1px solid black;
   padding: 0;
   box-sizing: border-box;
@@ -277,7 +285,7 @@ nav a {
   }
   .aLinks a {
     margin: 0 1em 0 0;
-    color: #F8F8F8;
+    color: #ededed;
   }
   .services {
     align-self: flex-end;
@@ -320,7 +328,7 @@ nav a {
   }
   .aLinks a {
     margin: 0 1em 0 0;
-    color: #F8F8F8;
+    color: #ededed;
   }
   .services {
     align-self: flex-end;
@@ -377,18 +385,17 @@ footer p {
 .footer-div-container {
   margin-top: 2em;
 }
-#directionBtn {
+.direction-btn {
   background-color: #F04343;
   color: #FFFFFF;
-  border: none;
-  border-radius: 0.5em;
-  height: 3em;
-  width: 10em;
   text-decoration: none;
-  margin: 1em 0 2em 0;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 1em 0 0 0;
   font-size: 0.8em;
+  display: inline-block;
 }
-#directionBtn:hover {
+.direction-btn:hover {
   background-color: #d73b3b;
 }
 @media screen and (min-width: 1000px) {
@@ -506,6 +513,7 @@ footer p {
   height: auto;
   width: 100%;
   animation: loadIn 2s;
+  margin-bottom: 3em;
 }
 .overlay {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
@@ -550,7 +558,7 @@ footer p {
 @media screen and (min-width: 1000px) {
   .title-container {
     height: auto;
-    margin-bottom: 6em;
+    margin-bottom: 4em;
   }
   .overlay {
     height: 100%;
@@ -591,13 +599,21 @@ footer p {
   margin: auto;
 }
 .text-block {
-  margin: 2em 1em 2em 1em;
+  margin: 2em 0 2em 0;
 }
 .text-block h2 {
   margin-bottom: 0;
 }
+.about-history {
+  margin: 2em auto;
+  width: 90%;
+}
+.about-img {
+  align-self: center;
+  margin: auto;
+}
 .service-header {
-  background-color: #F8F8F8;
+  background-color: #ededed;
   height: 2em;
   margin: 4em 0 0 0;
   padding: 2em 0 2em 1em;
@@ -610,7 +626,7 @@ footer p {
   height: auto;
   padding: 1em 0 1em 0;
   margin-top: 0;
-  background-color: #F8F8F8;
+  background-color: #ededed;
   box-sizing: border-box;
 }
 .service-explanation-section a {
@@ -631,7 +647,7 @@ footer p {
 }
 .quote-section {
   height: 20em;
-  background-color: #F8F8F8;
+  background-color: #ededed;
   margin: 4em 0 0 0;
 }
 .quote-section p {
@@ -650,21 +666,42 @@ footer p {
   background-color: #d73b3b;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  #homeQuoteSection {
+  .quote-section {
     max-width: 100%;
   }
-  #homeQuoteSection p {
+  .quote-section p {
     max-width: 90%;
   }
 }
 @media screen and (min-width: 1000px) {
   .text-block-container {
-    width: 40%;
-    margin: 0 8em 0 8em;
+    margin: 0 6em 0 6em;
+    display: flex;
+    width: auto;
+  }
+  section.text-block-container.flex-column-evenly-center {
+    width: 45%;
+    margin: 0 9em 0 9em;
   }
   .text-block {
-    width: 40%;
-    margin: 1em 4em 1em 4em;
+    margin: 1em auto 1em auto;
+  }
+  .text-block p {
+    width: 18em;
+  }
+  .about-history {
+    width: 85%;
+    margin: 5em 0 5em 10em;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-history p {
+    width: 60%;
+  }
+  .about-img {
+    position: absolute;
+    align-self: flex-end;
+    margin: 6em 2em 0 0;
   }
   .svg {
     position: absolute;
@@ -675,7 +712,7 @@ footer p {
     width: 60%;
   }
   .service-header {
-    background-color: #F8F8F8;
+    background-color: #ededed;
     margin-top: 3em;
     padding: 2em 0 1em 9em;
   }
@@ -722,7 +759,7 @@ footer p {
   margin-bottom: 2em;
 }
 #importanceNotice {
-  background-color: #F8F8F8;
+  background-color: #ededed;
   width: 100%;
   margin: 0 0 4em 0;
   box-sizing: border-box;
@@ -747,20 +784,17 @@ footer p {
     margin-bottom: 4em;
   }
   .service-container {
-    height: 30em;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
+    height: auto;
     box-sizing: border-box;
-    padding: 0 2em 0 2em;
+    padding: 1em 2em 1em 2em;
+    margin: 2em 0 2em 0;
   }
-  .service-container.fireExtServiceContainer {
+  .service-container.fire-ext-service-container {
     height: 40em;
   }
   .service-section {
     margin-left: 1em;
-    width: 50%;
+    width: 45%;
     box-sizing: border-box;
     padding: 0 3em 0 3em;
     align-self: center;
@@ -772,17 +806,19 @@ footer p {
     margin-top: 0;
   }
   #importanceNotice {
-    width: 40%;
-    height: 100%;
+    width: 45%;
     align-self: flex-start;
     margin: 0 1em 0 0;
+    padding: 2em;
   }
   #importanceNotice h1 {
-    margin: auto auto 1em auto;
+    margin: 0 0 0 1.25em;
+    text-align: left;
   }
   #importanceNotice p {
-    width: 70%;
-    margin: auto;
+    width: 90%;
+    margin: 1em auto;
+    text-align: left;
   }
   @supports (-ms-ime-align: auto) {
     .service-container {
@@ -806,11 +842,13 @@ footer p {
     width: 85%;
   }
   #importanceNotice {
-    padding: 4em 0 4em 0;
+    margin: 0 0 4em 0;
+    padding: 3em 0 4em 0;
   }
   #importanceNotice p {
-    width: 60%;
-    margin: auto;
+    width: 80%;
+    margin: 1em auto;
+    text-align: left;
   }
 }
 .contact-section {
@@ -849,7 +887,7 @@ form input {
   align-items: center;
 }
 label span {
-  background-color: #F8F8F8;
+  background-color: #ededed;
   padding: 1em 1em 1em 1em;
   text-align: center;
   align-self: center;
@@ -912,7 +950,7 @@ input[type="number"] {
   }
   .contact-section .service-section {
     height: 30em;
-    width: 30em;
+    width: 35em;
     margin: 0;
     align-self: flex-start;
     padding: 0;
@@ -954,7 +992,7 @@ input[type="number"] {
     width: 100%;
   }
   label span {
-    background-color: #F8F8F8;
+    background-color: #ededed;
     min-width: 8em;
     padding: 1em;
     font-size: 0.75em;
@@ -1039,7 +1077,7 @@ input[type="number"] {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: #F8F8F8;
+  background-color: #ededed;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.6);
 }
 #popUpContainer {
