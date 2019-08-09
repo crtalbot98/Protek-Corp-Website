@@ -48,9 +48,9 @@
 <section id="popUpContainer" class="hidePopUpDisplay no-js">
     <div id="popUp">
         <h1>Thank you!</h1>
-        <h2>We will get back to you soon</h2>
-        <p>If you have any additional questions feel free to call us at: (765)966-3473</p>
-        <button id="closeBtn">Close</button>
+        <h2></h2>
+        <p></p>
+        <button id="close-btn" class="btn close-btn">Close</button>
     </div>
 </section>
 
@@ -108,11 +108,11 @@
             <input type="email" name="Email" id="email" required>
         </div>
         <div class="inputField">
-            <label for="phone" class="formLabel">Phone Number</label>
-            <input type="number" name="Phone_Number" id="phone" required>
+            <label for="phone" class="formLabel">Phone Number (Follow (xxx) xxx-xxxx format)</label>
+            <input type="tel" name="Phone_Number" id="phone" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" required>
         </div>
         <div class="inputField">
-            <label for="companyName" class="formLabel">Company Name</label>
+            <label for="companyName" class="formLabel">Company Name (Input 'home' for households)</label>
             <input type="text" name="Company_Name" id="companyName" required>
         </div>
         <div class="inputField">
@@ -167,7 +167,7 @@
             <textarea name="Message" id="message" maxlength="500" required></textarea>
         </div>
         <div class="inputField">
-            <button type="submit" id="submitBtn">Submit</button>
+            <button type="submit" class="btn submit-btn">Submit</button>
         </div>
     </form>
 </section>
@@ -198,7 +198,7 @@
             <p>739 N 18th St</p>
             <p>Richmond, IN</p>
             <p>47374</p>
-            <a href="http://maps.google.com/?q=739 N 18th St, Richmond, IN 47374" class="direction-btn">
+            <a href="http://maps.google.com/?q=739 N 18th St, Richmond, IN 47374" class="btn direction-btn">
                 Directions
             </a>
         </div>

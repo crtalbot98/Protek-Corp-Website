@@ -1,35 +1,34 @@
-function onLoad() {
+window.addEventListener("load", function(){
     const navMenu = document.getElementById("navMenu");
     const dropDown = document.getElementById("dropDown");
 
-    window.addEventListener("load", function(){
-        document.body.classList.remove("no-js");
-        navMenu.classList.remove("no-js");
-        dropDown.classList.remove("no-js");
+    document.body.classList.remove("no-js");
+    navMenu.classList.remove("no-js");
+    dropDown.classList.remove("no-js");
+});
+
+(function () {
+    let active = false;
+
+    document.getElementById("navMenu").addEventListener("click", function(){
+        const navMenu = document.getElementById("navMenu");
+        const dropDown = document.getElementById("dropDown");
+        const dropDownChildren = dropDown.childNodes;
+        const menuBars = document.getElementsByClassName("menuBar");
+
+        active = !active;
+
+        if(active === true){
+            openNav(navMenu, dropDown, dropDownChildren);
+            changeMenuBarsOpen(menuBars);
+        }
+
+        if(active === false){
+            closeNav(navMenu, dropDown, dropDownChildren);
+            changeMenuBarsClose(menuBars);
+        }
     });
-}
-
-function navigation() {
-   const navMenu = document.getElementById("navMenu");
-   const dropDown = document.getElementById("dropDown");
-   const dropDownChildren = dropDown.childNodes;
-   const menuBars = document.getElementsByClassName("menuBar");
-   let active = false;
-
-   navMenu.addEventListener("click", function(){
-       active = !active;
-
-       if(active === true){
-           openNav(navMenu, dropDown, dropDownChildren);
-           changeMenuBarsOpen(menuBars);
-       }
-
-       if(active === false){
-           closeNav(navMenu, dropDown, dropDownChildren);
-           changeMenuBarsClose(menuBars);
-       }
-   });
-}
+})();
 
 function openNav(navMenu, dropDown, dropDownChildren){
     dropDown.style.visibility = "visible";
@@ -90,6 +89,3 @@ function changeMenuBarsClose(menuBars){
 
     menuBar2.id = "menuBar2Closed";
 }
-
-onLoad();
-navigation();

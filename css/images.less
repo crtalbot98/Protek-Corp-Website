@@ -1,0 +1,30 @@
+.about-img{
+  align-self: center;
+  margin: auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .about-img {
+    position: absolute;
+    align-self: flex-end;
+    margin: 6em 2em 0 0;
+  }
+
+  .logo {
+    position: absolute;
+    align-self: flex-end;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    .logo{
+      margin-left: 72em;
+      margin-top: -20em;
+    }
+  }
+
+  @supports (-ms-ime-align: auto) {
+    .logo {
+      margin-top: 8em;
+    }
+  }
+}
