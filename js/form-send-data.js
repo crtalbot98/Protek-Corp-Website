@@ -31,7 +31,7 @@ function sendData(formData){
     let h2Text = '';
     let pText ='';
 
-    xhttp.open("POST", "http://localhost:8080", true);
+    xhttp.open("POST", "165.22.182.218/Protek-Corp-Email-Server/server.js", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function(){
         if (xhttp.readyState === 4 && xhttp.status === 200){
@@ -42,11 +42,10 @@ function sendData(formData){
             showThankYouNotice(h2Text, pText);
             console.log("Data sent to "+string);
         }
-        else if (xhttp.readyState !== 4 && xhttp.status === 404){
+        else{
             h2Text = 'There seems to be a problem';
             pText = 'Try again in a few minutes or call us at (765) 966-3427';
             showThankYouNotice(h2Text, pText);
-            console.log("ERROR");
         }
     };
 
