@@ -33,6 +33,7 @@ function sendData(formData){
 
     xhttp.open("POST", "165.22.182.218/Protek-Corp-Email-Server/server.js", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhttp.onreadystatechange = function(){
         if (xhttp.readyState === 4 && xhttp.status === 200){
             const string = xhttp.responseText;
