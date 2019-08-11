@@ -31,7 +31,7 @@ function sendData(formData){
     let h2Text = '';
     let pText ='';
 
-    xhttp.open("POST", "127.0.0.53", true);
+    xhttp.open("POST", "165.22.182.218/", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhttp.onreadystatechange = function(){
