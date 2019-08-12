@@ -31,7 +31,7 @@ function sendData(formData){
     let h2Text = '';
     let pText ='';
 
-    xhttp.open("POST", "165.22.182.218/email", true);
+    xhttp.open("GET", "165.22.182.218/email", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function(){
         if (xhttp.readyState === 4 && xhttp.status === 200){
@@ -40,7 +40,6 @@ function sendData(formData){
             pText = 'If you have any additional questions feel free to call us at: (765) 966-3473';
 
             showThankYouNotice(h2Text, pText);
-            console.log("Data sent to "+string);
         }
         else{
             h2Text = 'There seems to be a problem';
