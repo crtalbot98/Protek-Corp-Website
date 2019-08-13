@@ -31,7 +31,7 @@ function sendData(formData){
     let h2Text = '';
     let pText ='';
 
-    xhttp.open("POST", "http://165.22.182.218/email", true);
+    xhttp.open("POST", "https://www.protek-corp-server.tk/email", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function(){
         if (xhttp.readyState === 4 && xhttp.status === 200){
