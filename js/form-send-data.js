@@ -33,12 +33,11 @@ function sendData(formData){
 
     xhttp.open("POST", "https://www.protek-corp-server.tk/email", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhttp.onreadystatechange = function(){
         if (xhttp.readyState === 4 && xhttp.status === 200){
-            const string = xhttp.responseText;
             h2Text = 'We will get back to you soon';
             pText = 'If you have any additional questions feel free to call us at: (765) 966-3473';
-
             showThankYouNotice(h2Text, pText);
         }
         else{
