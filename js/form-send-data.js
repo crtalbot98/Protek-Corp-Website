@@ -33,7 +33,6 @@ function sendData(formData){
 
     xhttp.open("POST", "https://www.protek-corp-server.tk/email", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhttp.onreadystatechange = function(){
         if (xhttp.readyState === 4 && xhttp.status === 200){
             h2Text = 'We will get back to you soon';

@@ -84,8 +84,8 @@
         </div>
         <div>
             <h1>Address</h1>
-            <p>739 N 18th St<br>
-            Richmond, IN<br>
+            <p>739 N 18th St,
+            Richmond, IN
             47374</p>
         </div>
         <div>
@@ -99,74 +99,74 @@
             <h1>Contact Us</h1>
             <p>All fields are required</p>
         </div>
-        <div class="inputField">
-            <label for="name" class="formLabel">Name</label>
+        <div class="input-field">
+            <label for="name" class="formLabel">First and Last Name</label>
             <input type="text" name="Name" id="name" required>
         </div>
-        <div class="inputField">
-            <label for="email" class="formLabel">Email</label>
+        <div class="input-field">
+            <label for="email" class="formLabel">Email <span class="label-instructions">name@email.com</span></label>
             <input type="email" name="Email" id="email" required>
         </div>
-        <div class="inputField">
-            <label for="phone" class="formLabel">Phone Number (Follow (xxx) xxx-xxxx format)</label>
+        <div class="input-field">
+            <label for="phone" class="formLabel">Phone Number <span class="label-instructions">(xxx) xxx-xxxx</span></label>
             <input type="tel" name="Phone_Number" id="phone" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" required>
         </div>
-        <div class="inputField">
-            <label for="companyName" class="formLabel">Company Name (Input 'home' for households)</label>
+        <div class="input-field">
+            <label for="companyName" class="formLabel">Company Name <span class="label-instructions">Home for residential properties</span></label>
             <input type="text" name="Company_Name" id="companyName" required>
         </div>
-        <div class="inputField">
+        <div class="input-field">
             <label for="streetAddress" class="formLabel">Street Address</label>
             <input type="text" name="Street_Address" id="streetAddress" required>
         </div>
-        <div class="inputField">
+        <div class="input-field">
             <label for="zipCode" class="formLabel">Zip Code</label>
             <input type="number" name="Zip_Code" id="zipCode" required>
         </div>
-        <div id="jobTypeSection" class="inputField">
+        <div id="jobTypeSection" class="input-field">
             <p>Job Type</p>
-            <div class="radioBtnContainer inputField" >
-                <label for="sprinklerInstall">
+            <div class="radioBtnContainer input-field" >
+                <label class="radio-btn" for="sprinklerInstall">
                 <input type="radio" name="Job_Type" id="sprinklerInstall" value="Sprinkler Installation" required>
                    <span>Sprinkler Installation</span>
                 </label>
             </div>
-            <div class="radioBtnContainer inputField">
-                <label for="sprinklerInspect">
+            <div class="radioBtnContainer input-field">
+                <label class="radio-btn" for="sprinklerInspect">
                 <input type="radio" name="Job_Type" value="Sprinkler Inspection" id="sprinklerInspect" required>
                 <span>Sprinkler Inspection</span>
                 </label>
             </div>
-            <div class="radioBtnContainer inputField">
-                <label for="alarmInstall">
+            <div class="radioBtnContainer input-field">
+                <label  class="radio-btn" for="alarmInstall">
                 <input type="radio" name="Job_Type" value="Alarm Installation" id="alarmInstall" required>
                 <span>Alarm Installation</span>
                 </label>
             </div>
-            <div class="radioBtnContainer inputField">
-                <label for="alarmInspect">
+            <div class="radioBtnContainer input-field">
+                <label class="radio-btn" for="alarmInspect">
                 <input type="radio" name="Job_Type" value="Alarm Inspection" id="alarmInspect" required>
                 <span>Alarm Inspection</span>
                 </label>
             </div>
-            <div class="radioBtnContainer inputField">
-                <label for="fireExt">
+            <div class="radioBtnContainer input-field">
+                <label class="radio-btn" for="fireExt">
                 <input type="radio" name="Job_Type" value="Fire Extinguishers" id="fireExt" required>
                 <span>Fire Extinguishers</span>
                 </label>
             </div>
-            <div class="radioBtnContainer inputField">
-                <label for="noneQuestion">
+            <div class="radioBtnContainer input-field">
+                <label class="radio-btn" for="noneQuestion">
                 <input type="radio" name="Job_Type" value="None/Question" id="noneQuestion" required>
                 <span>Question</span>
                 </label>
             </div>
         </div>
-        <div class="inputField">
+        <div class="input-field">
             <label for="message" class="formLabel">Message</label>
             <textarea name="Message" id="message" maxlength="500" required></textarea>
         </div>
-        <div class="inputField">
+        <div class="input-field">
             <button type="submit" class="btn submit-btn">Submit</button>
         </div>
     </form>

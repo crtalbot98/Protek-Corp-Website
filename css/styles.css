@@ -397,7 +397,7 @@ footer {
   margin-top: 4em;
 }
 footer h1 {
-  color: #C5C5C5;
+  color: #969696;
   margin: 0 0 0 0;
 }
 footer h3,
@@ -888,8 +888,8 @@ footer p {
   margin-top: 3em;
 }
 form {
-  margin-top: 4em;
-  width: 95%;
+  margin: 4em auto 0 auto;
+  width: 90%;
   padding: 0;
 }
 form input {
@@ -899,19 +899,24 @@ form input {
 .formLabel {
   margin: 2em 0 0 0;
 }
-.inputField {
+.label-instructions {
+  font-size: 0.8em;
+  color: #969696;
+  margin-left: 0.5em;
+}
+.input-field {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  width: 90%;
+  width: 95%;
 }
 #jobTypeSection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-label span {
+.radio-btn span {
   background-color: #ededed;
   padding: 1em 1em 1em 1em;
   text-align: center;
@@ -919,7 +924,7 @@ label span {
   width: 10em;
   display: inline-block;
   border-radius: 0.5em;
-  border: 1px solid #C5C5C5;
+  border: 1px solid #969696;
   position: absolute;
   margin-top: -2em;
 }
@@ -933,7 +938,7 @@ input[type=radio] {
   opacity: 0;
 }
 label input[type=radio]:hover ~ * {
-  background-color: #C5C5C5;
+  background-color: #969696;
 }
 label input[type=radio]:checked ~ * {
   background-color: #d73b3b;
@@ -1006,7 +1011,7 @@ input[type="number"] {
   #message {
     width: 100%;
   }
-  label span {
+  .radio-btn span {
     background-color: #ededed;
     min-width: 8em;
     padding: 1em;
@@ -1073,8 +1078,9 @@ input[type="number"] {
     width: 80%;
     margin: 2em auto;
   }
-  .inputField {
+  .input-field {
     margin: 0 auto;
+    width: 100%;
   }
   #jobTypeSection p {
     margin: -2em auto auto -20em;
