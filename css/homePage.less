@@ -4,7 +4,7 @@
 }
 
 .text-block{
-  margin: 2em 0 2em 0;
+  margin: 2em 0 0 0;
 
   h2{
     margin-bottom: 0;
@@ -77,15 +77,13 @@
 
 @media screen and (min-width: 1000px){
   .text-block-container{
-    margin: 0 6em 0 6em;
+    margin: 0 8em 0 8em;
     display: flex;
     width: auto;
   }
 
   section.text-block-container.flex-column-evenly-center{
     width: 85%;
-    padding: 0 3em 0 3em;
-    box-sizing: border-box;
 
     p{
       width: 50%;
@@ -93,7 +91,7 @@
   }
 
   .text-block{
-    margin: 1em auto 1em auto;
+    margin: 0;
 
     p{
       width: 18em;
@@ -101,8 +99,8 @@
   }
 
   .about-history{
-    width: 85%;
-    margin: 5em 0 5em 10em;
+    width: 80%;
+    margin: 5em 0 5em 8em;
     display: flex;
     flex-direction: column;
 
@@ -120,12 +118,12 @@
   .service-header{
     background-color: @navGray;
     margin-top: 3em;
-    padding: 2em 0 1em 9em;
+    padding: 2em 0 2em 8em;
   }
 
   .service-explanation-section{
-    height: 32em;
-    padding: 1em 8em 1em 8em;
+    height: auto;
+    padding: 1em 7em 2em 7em;
     box-sizing: border-box;
 
     a{
@@ -141,7 +139,6 @@
   @supports (-ms-ime-align: auto){
     .text-block{
       width: 100%;
-      margin: 2em 4em 2em 4em;
     }
   }
 }

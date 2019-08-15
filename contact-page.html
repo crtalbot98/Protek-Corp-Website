@@ -58,7 +58,7 @@
     <div class="title-image" id="contact-title-image">
         <div class="overlay">
             <h3 class="title-text">
-                CONTACT US TODAY!
+                CONTACT US TODAY
             </h3>
         </div>
     </div>
@@ -97,7 +97,6 @@
     <form id="contactForm" action="js/server.js" method="POST">
         <div>
             <h1>Contact Us</h1>
-            <p>All fields are required</p>
         </div>
         <div class="input-field">
             <label for="name" class="formLabel">First and Last Name</label>
@@ -116,11 +115,11 @@
             <input type="text" name="Company_Name" id="companyName" required>
         </div>
         <div class="input-field">
-            <label for="streetAddress" class="formLabel">Street Address</label>
+            <label for="streetAddress" class="formLabel">Street Address <span class="label-instructions">Street address, city, state</span></label>
             <input type="text" name="Street_Address" id="streetAddress" required>
         </div>
         <div class="input-field">
-            <label for="zipCode" class="formLabel">Zip Code</label>
+            <label for="zipCode" class="formLabel">Zip Code <span class="label-instructions">5 digits</span></label>
             <input type="number" name="Zip_Code" id="zipCode" required>
         </div>
         <div id="jobTypeSection" class="input-field">
@@ -163,8 +162,8 @@
             </div>
         </div>
         <div class="input-field">
-            <label for="message" class="formLabel">Message</label>
-            <textarea name="Message" id="message" maxlength="500" required></textarea>
+            <label for="message" class="formLabel">Message <span class="label-instructions">Your question(s) or more information</span></label>
+            <textarea name="Message" id="message" maxlength="500"></textarea>
         </div>
         <div class="input-field">
             <button type="submit" class="btn submit-btn">Submit</button>

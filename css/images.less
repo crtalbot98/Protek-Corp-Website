@@ -1,22 +1,45 @@
 .about-img{
-  align-self: center;
-  margin: auto;
+  margin: 2em auto 2em auto;
+  height: 200px;
+  width: 300px;
+}
+
+.logo{
+  margin: 2em auto 2em auto;
+  height: 145px;
+  width: 300px;
+}
+
+@media screen and (min-width: 1290px){
+  .logo {
+    height: 218px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .logo{
+    width: 400px;
+    height: 194px;
+    position: absolute;
+    align-self: flex-end;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .about-img {
     position: absolute;
     align-self: flex-end;
-    margin: 6em 2em 0 0;
-  }
-
-  .logo {
-    position: absolute;
-    align-self: flex-end;
+    height: 267px;
+    width: 400px;
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
     .logo{
+      margin-left: 72em;
+      margin-top: -20em;
+    }
+    .about-img{
       margin-left: 72em;
       margin-top: -20em;
     }
