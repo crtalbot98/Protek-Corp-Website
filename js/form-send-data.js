@@ -51,10 +51,10 @@ function sendData(formData){
 }
 
 function showThankYouNotice(h2Text, pText){
-    const popUp = document.getElementById("popUp");
+    const popUp = document.getElementById("pop-up");
 
-    document.getElementById("popUpContainer")
-        .classList.remove("hidePopUpDisplay");
+    document.getElementById("pop-up-container")
+        .classList.remove("hide-pop-up-display");
 
     popUp.childNodes[1].textContent = h2Text;
     popUp.childNodes[2].textContent = pText;
@@ -63,6 +63,6 @@ function showThankYouNotice(h2Text, pText){
 }
 
 document.getElementById("close-btn").addEventListener("click", function(){
-        document.getElementById("popUpContainer").classList.add("hidePopUpDisplay");
+        document.getElementById("pop-up-container").classList.add("hide-pop-up-display");
         document.body.classList.remove("preventScroll");
 });
