@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
-    const navMenu = document.getElementById("navMenu");
-    const dropDown = document.getElementById("dropDown");
+    const navMenu = document.getElementById("nav-menu");
+    const dropDown = document.getElementById("drop-down");
 
     document.body.classList.remove("no-js");
     navMenu.classList.remove("no-js");
@@ -11,10 +11,10 @@ window.addEventListener("load", function(){
     let active = false;
 
     document.getElementById("navMenu").addEventListener("click", function(){
-        const navMenu = document.getElementById("navMenu");
-        const dropDown = document.getElementById("dropDown");
+        const navMenu = document.getElementById("nav-menu");
+        const dropDown = document.getElementById("drop-down");
         const dropDownChildren = dropDown.childNodes;
-        const menuBars = document.getElementsByClassName("menuBar");
+        const menuBars = document.getElementsByClassName("menu-bar");
 
         active = !active;
 

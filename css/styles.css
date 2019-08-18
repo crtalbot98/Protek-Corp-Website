@@ -191,22 +191,22 @@ nav {
   align-items: center;
 }
 nav h1 {
-  margin-left: 1em;
+  margin-left: 0.25em;
   color: white;
 }
 nav a {
   margin-left: 1em;
   text-decoration: none;
 }
-#desktopNav {
+#desktop-nav {
   display: none;
 }
-#navMenu {
+#nav-menu {
   height: 2.5em;
   width: 3em;
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
-.menuBar {
+.menu-bar {
   width: 3em;
   height: 0.5em;
   border-radius: 0.1em;
@@ -235,7 +235,7 @@ nav a {
   transform: rotate(0deg) translate(0em, 0em);
   transition: 0.25s linear;
 }
-#dropDown {
+#drop-down {
   visibility: hidden;
   top: 4em;
   left: 0;
@@ -247,7 +247,7 @@ nav a {
   padding: 0;
   box-sizing: border-box;
 }
-#dropDown a {
+#drop-down a {
   opacity: 0;
   margin-top: 3em;
   color: black;
@@ -257,43 +257,43 @@ nav a {
   display: flex;
   flex-direction: column;
 }
-.no-js #navMenu:active,
-.no-js #navMenu:hover {
+.no-js #nav-menu:active,
+.no-js #nav-menu:hover {
   cursor: pointer;
 }
-.no-js #navMenu:active body,
-.no-js #navMenu:hover body {
+.no-js #nav-menu:active body,
+.no-js #nav-menu:hover body {
   overflow: hidden;
 }
-.no-js #navMenu:active #dropDown,
-.no-js #navMenu:hover #dropDown {
+.no-js #nav-menu:active #drop-down,
+.no-js #nav-menu:hover #drop-down {
   visibility: visible;
   height: 100vh;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
-.no-js #navMenu:active #dropDown a,
-.no-js #navMenu:hover #dropDown a {
+.no-js #nav-menu:active #drop-down a,
+.no-js #nav-menu:hover #drop-down a {
   opacity: 1;
   transition: opacity 0.1s linear;
 }
-.no-js html:active #dropDown,
-.no-js html:hover #dropDown {
+.no-js html:active #drop-down,
+.no-js html:hover #drop-down {
   height: 0;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
-.no-js html:active #dropDown a,
-.no-js html:hover #dropDown a {
+.no-js html:active #drop-down a,
+.no-js html:hover #drop-down a {
   opacity: 0;
   transition: opacity 0.1s linear;
 }
 @media screen and (min-width: 600px) and (max-width: 1223px) {
-  #dropDown,
-  #navMenu,
-  #mobileTitle {
+  #drop-down,
+  #nav-menu,
+  #mobile-title {
     display: none;
   }
   nav {
@@ -306,21 +306,21 @@ nav a {
     margin: -1em 0 auto 2em;
     max-width: 100%;
   }
-  #desktopNav {
+  #desktop-nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
   }
-  .aLinks {
+  .a-links {
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
     margin: 0 1em 0 0;
     max-width: 100%;
   }
-  .aLinks a {
+  .a-links a {
     margin: 0 1em 0 0;
     color: #ededed;
   }
@@ -334,9 +334,9 @@ nav a {
   }
 }
 @media screen and (min-width: 1224px) {
-  #dropDown,
-  #navMenu,
-  #mobileTitle {
+  #drop-down,
+  #nav-menu,
+  #mobile-title {
     display: none;
   }
   nav {
@@ -349,21 +349,21 @@ nav a {
     margin: auto 0 auto 2em;
     max-width: 100%;
   }
-  #desktopNav {
+  #desktop-nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 3em;
   }
-  .aLinks {
+  .a-links {
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
     margin: 0 1em 0 0;
     max-width: 100%;
   }
-  .aLinks a {
+  .a-links a {
     margin: 0 1em 0 0;
     color: #ededed;
   }
@@ -380,7 +380,7 @@ nav a {
   nav {
     height: 5em;
   }
-  #desktopNav {
+  #desktop-nav {
     height: 5em;
   }
 }
@@ -567,13 +567,13 @@ footer p {
   background-image: url("../assets/images/protek-about-mobile.jpg");
 }
 #sprinkler-title-image {
-  background-image: url("../assets/images/sprinkler-valve-mobile.jpg");
+  background-image: url("../assets/images/sprinkler-valve-mobile-s.jpg");
 }
 #alarm-title-image {
   background-image: url("../assets/images/camera-cyber-data-430208-mobile.jpg");
 }
 #extinguisher-title-image {
-  background-image: url("../assets/images/blur-bright-close-up-1661377.jpg");
+  background-image: url("../assets/images/protek-extinguisher-mobile.jpg");
 }
 #contact-title-image {
   background-image: url("../assets/images/protek-contact-mobile.jpg");
@@ -608,7 +608,7 @@ footer p {
     background-image: url("../assets/images/camera-cyber-data-430208.jpg");
   }
   #extinguisher-title-image {
-    background-image: url("../assets/images/blur-bright-close-up-1661377.jpg");
+    background-image: url("../assets/images/protek-extinguisher.jpg");
   }
   #contact-title-image {
     background-image: url("../assets/images/protek-contact.jpg");
@@ -622,6 +622,9 @@ footer p {
 @media screen and (min-width: 600px) and (max-width: 999px) {
   #sprinkler-title-image {
     background-image: url("../assets/images/sprinkler-valve-tablet.jpg");
+  }
+  #extinguisher-title-image {
+    background-image: url("../assets/images/protek-extinguisher-tablet.jpg");
   }
   #about-title-image {
     background-image: url("../assets/images/protek-about-tablet.jpg");
@@ -641,6 +644,9 @@ footer p {
   .title-text {
     margin-top: 18em;
   }
+}
+@media screen and (min-width: 400px) {
+  background-image: url("../assets/images/sprinkler-valve-mobile.jpg");
 }
 .about-img {
   margin: 2em auto 2em auto;

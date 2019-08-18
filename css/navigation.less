@@ -12,7 +12,7 @@ nav{
   align-items: center;
 
   h1{
-    margin-left: 1em;
+    margin-left: 0.25em;
     color: white;
   }
 
@@ -22,17 +22,17 @@ nav{
   }
 }
 
-#desktopNav{
+#desktop-nav{
   display: none;
 }
 
-#navMenu{
+#nav-menu{
   height: 2.5em;
   width: 3em;
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 
-.menuBar{
+.menu-bar{
   width: 3em;
   height: 0.50em;
   border-radius: 0.10em;
@@ -68,7 +68,7 @@ nav{
   transition: 0.25s linear;
 }
 
-#dropDown{
+#drop-down{
   visibility: hidden;
   top: 4em;
   left: 0;
@@ -94,14 +94,14 @@ nav{
 }
 
 .no-js{
-  #navMenu:active, #navMenu:hover{
+  #nav-menu:active, #nav-menu:hover{
     cursor: pointer;
 
     body{
       overflow: hidden;
     }
 
-    #dropDown{
+    #drop-down{
       visibility: visible;
       height: 100vh;
 
@@ -119,7 +119,7 @@ nav{
 
 .no-js{
   html:active, html:hover{
-    #dropDown{
+    #drop-down{
       height: 0;
 
       transition-property: all;
@@ -135,7 +135,7 @@ nav{
 }
 
 @media screen and (min-width: 600px) and (max-width: 1223px){
-  #dropDown, #navMenu, #mobileTitle{
+  #drop-down, #nav-menu, #mobile-title{
     display: none;
   }
 
@@ -151,7 +151,7 @@ nav{
     }
   }
 
-  #desktopNav{
+  #desktop-nav{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -159,7 +159,7 @@ nav{
     height: 100%;
   }
 
-  .aLinks{
+  .a-links{
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
@@ -184,7 +184,7 @@ nav{
 }
 
 @media screen and (min-width: 1224px){
-  #dropDown, #navMenu, #mobileTitle{
+  #drop-down, #nav-menu, #mobile-title{
     display: none;
   }
 
@@ -200,7 +200,7 @@ nav{
     }
   }
 
-  #desktopNav{
+  #desktop-nav{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -208,7 +208,7 @@ nav{
     height: 3em;
   }
 
-  .aLinks{
+  .a-links{
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
@@ -236,7 +236,7 @@ nav{
       height: 5em;
     }
 
-    #desktopNav{
+    #desktop-nav{
       height: 5em;
     }
   }
