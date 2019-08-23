@@ -716,7 +716,7 @@ footer p {
   padding: 2em 0 2em 1em;
 }
 .service-header h1 {
-  color: #d73b3b;
+  color: #D50E18;
 }
 .service-explanation-section {
   width: 100%;
@@ -729,18 +729,18 @@ footer p {
 .service-explanation-section a {
   text-decoration: none;
   font-weight: bold;
-  color: #d73b3b;
+  color: #D50E18;
 }
 .service-explanation-section div {
   margin: 0 1em 0 1em;
 }
 .service-explanation-section h1 {
   text-align: center;
-  color: #d73b3b;
+  color: #D50E18;
   margin-bottom: 2em;
 }
 .service-explanation-section h2 {
-  color: #d73b3b;
+  color: #D50E18;
 }
 .quote-section {
   height: 20em;
@@ -844,7 +844,7 @@ footer p {
 }
 #importanceNotice h1 {
   margin-bottom: 2em;
-  color: #d73b3b;
+  color: #D50E18;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #servicesExplanationSection {
